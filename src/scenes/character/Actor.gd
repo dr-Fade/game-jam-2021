@@ -21,7 +21,7 @@ func _physics_process(delta) -> void:
 	if Input.is_key_pressed(KEY_W):
 		move_and_slide(-velocityY)
 	if Input.is_key_pressed(KEY_S):
-		move_and_slide(velocityY)
+		move_and_slide(velocityY)	
 
 
 # Declare member variables here. Examples:
