@@ -8,16 +8,27 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://scenes/character/Actor.gd"
+} ]
 _global_script_class_icons={
-
+"Actor": ""
 }
 
 [application]
 
 config/name="Random-game"
 run/main_scene="res://scenes/level/Level.tscn"
+boot_splash/image="res://icon.png"
+boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [rendering]
 
