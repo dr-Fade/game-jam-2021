@@ -18,7 +18,11 @@ enum Trait {
 	DULL,
 	STICKY,
 	AGGRESSIVE,
-	CALM
+	CALM,
+	ANGRY,
+	HEAVY,
+	NERVOUS,
+	LIGHT
 }
 func name_to_trait(name):
 	return Trait.keys().find(name)

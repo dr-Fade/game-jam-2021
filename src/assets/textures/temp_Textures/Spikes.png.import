@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ca3db2e7d89c9765a2e518d9b7d6915d.jpg-82c8e74e92c8da97f88fc47ab03c05ee.stex"
+path="res://.import/Spikes.png-aa006110d013123541f0cb306e76233c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TEMP_textures_NOT_LICENSED/ca3db2e7d89c9765a2e518d9b7d6915d.jpg"
-dest_files=[ "res://.import/ca3db2e7d89c9765a2e518d9b7d6915d.jpg-82c8e74e92c8da97f88fc47ab03c05ee.stex" ]
+source_file="res://assets/textures/temp_Textures/Spikes.png"
+dest_files=[ "res://.import/Spikes.png-aa006110d013123541f0cb306e76233c.stex" ]
 
 [params]
 

@@ -1,5 +1,6 @@
 extends AbstractObject
 
+var obj : AbstractObject
 var peer_object: AbstractObject = null
 
 func _ready():
