@@ -2,9 +2,9 @@ extends AbstractObject
 class_name Boat
 
 func _ready():
-	traits.append(Traits.Trait.ANGRY)
-	traits.append(Traits.Trait.HEAVY)
-	fill_traits_list()
+	innate_traits.append(Traits.Trait.ANGRY)
+	innate_traits.append(Traits.Trait.HEAVY)
+	fill_ui_lists()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

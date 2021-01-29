@@ -3,6 +3,6 @@ class_name Segul
 
 
 func _ready():
-	traits.append(Traits.Trait.NERVOUS)
-	fill_traits_list()
+	innate_traits.append(Traits.Trait.NERVOUS)
+	fill_ui_lists()
 

@@ -11,7 +11,7 @@ enum Trait {
 	# qualities
 	POISONOUS,
 	HEALING,
-	BURNING,
+	HOT,
 	WET,
 	DRY,
 	SHARP,
@@ -24,8 +24,12 @@ enum Trait {
 	NERVOUS,
 	LIGHT
 }
-func name_to_trait(name):
-	return Trait.keys().find(name)
+
+# when traits are combined, they can create an effect
+enum Effect {
+	BURNING,
+	SINKING,
+}
 
 # list of traits that cannot be in the same object and must annihilate
 export var annihilation_map = [
@@ -33,18 +37,30 @@ export var annihilation_map = [
 	Vector2(Trait.WET, Trait.STICKY),
 	Vector2(Trait.SHARP, Trait.DULL),
 	Vector2(Trait.AGGRESSIVE, Trait.CALM),
+	Vector2(Trait.HEAVY, Trait.LIGHT),
 ]
 
 # list of traits that transform into another trait
 export var synergy_map = {
-	Vector2(Trait.BURNING, Trait.WET): Trait.DRY,
-}	
+	Vector2(Trait.HOT, Trait.WET): Trait.DRY,
+}
 
 # list of traits that cannot be in the same object and must NOT annihilate
-export var incompatibility_map = [
-	Vector2(Trait.GLASSY, Trait.BURNING),
-	Vector2(Trait.METALLIC, Trait.BURNING),
-]
+export var incompatibility_map = []
+
+export var effects_map = {
+	Vector2(Trait.WOODEN, Trait.HOT): Effect.BURNING,
+	Vector2(Trait.METALLIC, Trait.HEAVY): Effect.SINKING,
+}
+
+func fit_trait(new_trait, traits):
+	return Traits.annihilate_traits(
+		new_trait,
+		Traits.synergize_traits(
+			new_trait,
+			traits
+		)
+	)
 
 func synergize_traits(new_trait, old_traits) -> Array:
 	var new_traits := []
@@ -64,16 +80,16 @@ func annihilate_traits(new_trait, old_traits) -> Array:
 	return new_traits
 
 func traits_incompatible(t1, t2) -> bool:
-	return Traits.incompatibility_map.has(Vector2(t1, t2)) || Traits.incompatibility_map.has(Vector2(t2, t1))
+	return incompatibility_map.has(Vector2(t1, t2)) || Traits.incompatibility_map.has(Vector2(t2, t1))
 
 func traits_annihilate(t1, t2) -> bool:
-	return Traits.annihilation_map.has(Vector2(t1, t2)) || Traits.annihilation_map.has(Vector2(t2, t1))
+	return annihilation_map.has(Vector2(t1, t2)) || Traits.annihilation_map.has(Vector2(t2, t1))
 
 func synegrize_traits(t1, t2):
-	if Traits.synergy_map.has(Vector2(t1, t2)):
-		return Traits.synergy_map[Vector2(t1, t2)]
-	elif Traits.synergy_map.has(Vector2(t2, t1)):
-		return Traits.synergy_map[Vector2(t2, t1)]
+	if synergy_map.has(Vector2(t1, t2)):
+		return synergy_map[Vector2(t1, t2)]
+	elif synergy_map.has(Vector2(t2, t1)):
+		return synergy_map[Vector2(t2, t1)]
 	else:
 		return null
 
@@ -82,3 +98,15 @@ func is_new_trait_compatible(new_trait, traits) -> bool:
 		if traits_incompatible(new_trait, t) or new_trait == t:
 			return false
 	return true
+
+func get_effects(traits):
+	var effects = []
+	for i in range(traits.size()-1):
+		for j in range(i+1,traits.size()):
+			var t1 = traits[i]
+			var t2 = traits[j]
+			if effects_map.has(Vector2(t1, t2)):
+				effects.append(effects_map[Vector2(t1, t2)])
+			elif effects_map.has(Vector2(t2, t1)):
+				effects.append(effects_map[Vector2(t2, t1)])
+	return effects

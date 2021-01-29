@@ -6,8 +6,8 @@ var peer_object: AbstractObject = null
 func _ready():
 	traits.append(Traits.Trait.CALM)
 	traits.append(Traits.Trait.METALLIC)
-	traits.append(Traits.Trait.BURNING)
-	fill_traits_list()
+	traits.append(Traits.Trait.HOT)
+	fill_ui_lists()
 
 func _physics_process(delta) -> void:
 	var deltaSpeed = deltaSpeedCoef * delta
@@ -37,5 +37,5 @@ func _on_TraitUiOpener_body_exited(body):
 		$TraitsList.visible = false
 
 func _on_TraitsList_item_activated(index):
-	var trait = traits[index]
+	var trait = traits[index - innate_traits.size()]
 	try_pass_trait(self, peer_object, trait)

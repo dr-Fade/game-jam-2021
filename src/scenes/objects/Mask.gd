@@ -8,8 +8,8 @@ class_name Mask
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	traits.append(Traits.Trait.METALLIC)
-	fill_traits_list()
+	innate_traits.append(Traits.Trait.METALLIC)
+	fill_ui_lists()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
