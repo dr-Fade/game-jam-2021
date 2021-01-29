@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ca3db2e7d89c9765a2e518d9b7d6915d.jpg-82c8e74e92c8da97f88fc47ab03c05ee.stex"
+path="res://.import/ground_atlas.png-3a9cd104e31a3529319450c155be99f4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TEMP_textures_NOT_LICENSED/ca3db2e7d89c9765a2e518d9b7d6915d.jpg"
-dest_files=[ "res://.import/ca3db2e7d89c9765a2e518d9b7d6915d.jpg-82c8e74e92c8da97f88fc47ab03c05ee.stex" ]
+source_file="res://assets/textures/ground_atlas.png"
+dest_files=[ "res://.import/ground_atlas.png-3a9cd104e31a3529319450c155be99f4.stex" ]
 
 [params]
 
