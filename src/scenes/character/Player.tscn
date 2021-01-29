@@ -3,8 +3,8 @@
 [ext_resource path="res://scenes/character/Player.gd" type="Script" id=1]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 23.5452
-height = 64.6224
+radius = 14.1644
+height = 19.7175
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
@@ -15,17 +15,19 @@ radius = 121.48
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
-speed = Vector2( 150, 150 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.431534, -0.240608 )
+rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="player" type="Sprite" parent="."]
-position = Vector2( 0, -0.595274 )
+position = Vector2( 0.116547, -52.7654 )
 scale = Vector2( 0.241086, 0.230355 )
 texture = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0.116547, -52.1702 )
 current = true
 
 [node name="TraitsList" type="ItemList" parent="."]
@@ -40,8 +42,10 @@ __meta__ = {
 }
 
 [node name="TraitUiOpener" type="Area2D" parent="."]
+position = Vector2( 0.116547, -52.1702 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TraitUiOpener"]
+position = Vector2( 0.314987, 0 )
 shape = SubResource( 3 )
 [connection signal="item_activated" from="TraitsList" to="." method="_on_TraitsList_item_activated"]
 [connection signal="body_entered" from="TraitUiOpener" to="." method="_on_TraitUiOpener_body_entered"]

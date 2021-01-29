@@ -20,6 +20,31 @@ _global_script_classes=[ {
 "path": "res://scenes/character/Actor.gd"
 }, {
 "base": "AbstractObject",
+"class": "Boat",
+"language": "GDScript",
+"path": "res://scenes/objects/Boat.gd"
+}, {
+"base": "AbstractObject",
+"class": "Crate",
+"language": "GDScript",
+"path": "res://scenes/objects/Crate.gd"
+}, {
+"base": "AbstractObject",
+"class": "Feather",
+"language": "GDScript",
+"path": "res://scenes/objects/Feather.gd"
+}, {
+"base": "AbstractObject",
+"class": "Mask",
+"language": "GDScript",
+"path": "res://scenes/objects/Mask.gd"
+}, {
+"base": "AbstractObject",
+"class": "Segul",
+"language": "GDScript",
+"path": "res://scenes/objects/Segul.gd"
+}, {
+"base": "AbstractObject",
 "class": "Spikes",
 "language": "GDScript",
 "path": "res://scenes/objects/Spikes.gd"
@@ -27,6 +52,11 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "AbstractObject": "",
 "Actor": "",
+"Boat": "",
+"Crate": "",
+"Feather": "",
+"Mask": "",
+"Segul": "",
 "Spikes": ""
 }
 
