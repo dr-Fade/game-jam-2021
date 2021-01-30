@@ -4,9 +4,9 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.9722
-height = 15.5854
+height = 71.0165
 
-[sub_resource type="CircleShape2D" id=26]
+[sub_resource type="CircleShape2D" id=2]
 radius = 127.226
 
 [node name="Object" type="KinematicBody2D"]
@@ -29,7 +29,6 @@ __meta__ = {
 }
 
 [node name="EffectsList" type="ItemList" parent="."]
-visible = false
 margin_left = 74.7687
 margin_top = 0.442703
 margin_right = 149.769
@@ -46,7 +45,7 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TraitUiOpener"]
 position = Vector2( -25, -25 )
-shape = SubResource( 26 )
+shape = SubResource( 2 )
 [connection signal="item_activated" from="TraitsList" to="." method="_on_TraitsList_item_activated"]
 [connection signal="body_entered" from="TraitUiOpener" to="." method="_on_TraitUiOpener_body_entered"]
 [connection signal="body_exited" from="TraitUiOpener" to="." method="_on_TraitUiOpener_body_exited"]

@@ -5,8 +5,7 @@ func _ready():
 	visible = false
 	$ObjectCollision.disabled = true
 	$EffectsList.free()
-	
-	
+
 	add_trait(Traits.Trait.EMPTY)
 	add_trait(Traits.Trait.EMPTY)
 
