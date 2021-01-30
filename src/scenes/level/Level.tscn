@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://scenes/character/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/objects/Boat.gd" type="Script" id=2]
@@ -26,6 +26,23 @@
 [ext_resource path="res://assets/textures/temp_Textures/Boat.png" type="Texture" id=24]
 [ext_resource path="res://assets/textures/temp_Textures/Crate.png" type="Texture" id=25]
 [ext_resource path="res://assets/textures/temp_Textures/Feather.png" type="Texture" id=26]
+[ext_resource path="res://scenes/objects/AbstractObject.gd" type="Script" id=27]
+[ext_resource path="res://scenes/objects/Bandage.gd" type="Script" id=28]
+[ext_resource path="res://scenes/objects/Towel.gd" type="Script" id=29]
+[ext_resource path="res://assets/textures/temp_Textures/citizen.png" type="Texture" id=30]
+[ext_resource path="res://assets/textures/temp_Textures/flower.png" type="Texture" id=31]
+[ext_resource path="res://assets/textures/temp_Textures/towel.png" type="Texture" id=32]
+[ext_resource path="res://scenes/objects/Gold.gd" type="Script" id=33]
+[ext_resource path="res://scenes/objects/Web.gd" type="Script" id=34]
+[ext_resource path="res://scenes/objects/Flower.gd" type="Script" id=35]
+[ext_resource path="res://scenes/objects/Native.gd" type="Script" id=36]
+[ext_resource path="res://scenes/objects/Fly.gd" type="Script" id=37]
+[ext_resource path="res://assets/textures/temp_Textures/monkey.png" type="Texture" id=38]
+[ext_resource path="res://assets/textures/temp_Textures/fly.png" type="Texture" id=39]
+[ext_resource path="res://assets/textures/temp_Textures/bandage-activity-game-sport-512.png" type="Texture" id=40]
+[ext_resource path="res://assets/textures/temp_Textures/web.png" type="Texture" id=41]
+[ext_resource path="res://assets/textures/temp_Textures/gold.png" type="Texture" id=42]
+[ext_resource path="res://assets/textures/temp_Textures/spider.png" type="Texture" id=43]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
@@ -213,84 +230,91 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 11/z_index = 0
 
 [sub_resource type="CapsuleShape2D" id=12]
-radius = 14.1644
-height = 19.7175
+radius = 9.9722
+height = 15.5854
 
-[sub_resource type="StreamTexture" id=13]
-flags = 4
-load_path = "res://.import/Player.png-b933e46b6c02f5ee176339a9906c23bf.stex"
-
-[sub_resource type="CircleShape2D" id=14]
-radius = 121.48
-
-[sub_resource type="CapsuleShape2D" id=15]
-radius = 28.0728
-height = 66.576
-
-[sub_resource type="CircleShape2D" id=16]
+[sub_resource type="CircleShape2D" id=13]
 radius = 127.226
 
-[sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 56.8054, 357.864 )
-
-[sub_resource type="CapsuleShape2D" id=18]
-radius = 142.054
-height = 672.723
-
-[sub_resource type="CapsuleShape2D" id=19]
-radius = 27.7131
-height = 65.7095
-
-[sub_resource type="CircleShape2D" id=20]
-radius = 130.952
-
-[sub_resource type="CapsuleShape2D" id=21]
-radius = 48.11
-height = 254.567
-
-[sub_resource type="CircleShape2D" id=22]
-radius = 158.063
-
-[sub_resource type="CapsuleShape2D" id=23]
-height = 9.02075
-
-[sub_resource type="CircleShape2D" id=24]
-radius = 71.5186
-
-[sub_resource type="CapsuleShape2D" id=33]
+[sub_resource type="CapsuleShape2D" id=14]
 radius = 13.2523
 height = 58.0713
 
-[sub_resource type="CircleShape2D" id=34]
+[sub_resource type="CircleShape2D" id=15]
 radius = 100.569
 
-[sub_resource type="CapsuleShape2D" id=25]
+[sub_resource type="CapsuleShape2D" id=16]
 radius = 9.9722
 height = 58.0713
 
-[sub_resource type="CircleShape2D" id=26]
+[sub_resource type="CircleShape2D" id=17]
 radius = 127.226
 
-[sub_resource type="CapsuleShape2D" id=27]
+[sub_resource type="CapsuleShape2D" id=18]
 radius = 23.8274
 height = 193.276
 
-[sub_resource type="CircleShape2D" id=28]
+[sub_resource type="CircleShape2D" id=19]
 radius = 195.984
 
-[sub_resource type="CapsuleShape2D" id=29]
+[sub_resource type="CapsuleShape2D" id=20]
 radius = 9.9722
 height = 47.8491
 
-[sub_resource type="CircleShape2D" id=30]
+[sub_resource type="CircleShape2D" id=21]
 radius = 114.715
 
-[sub_resource type="CapsuleShape2D" id=31]
+[sub_resource type="CapsuleShape2D" id=22]
 radius = 9.9722
 height = 47.682
 
-[sub_resource type="CircleShape2D" id=32]
+[sub_resource type="CircleShape2D" id=23]
 radius = 60.1625
+
+[sub_resource type="CapsuleShape2D" id=24]
+radius = 28.0728
+height = 66.576
+
+[sub_resource type="CircleShape2D" id=25]
+radius = 127.226
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 56.8054, 357.864 )
+
+[sub_resource type="CapsuleShape2D" id=27]
+radius = 142.054
+height = 672.723
+
+[sub_resource type="CapsuleShape2D" id=28]
+radius = 27.7131
+height = 65.7095
+
+[sub_resource type="CircleShape2D" id=29]
+radius = 130.952
+
+[sub_resource type="CapsuleShape2D" id=30]
+radius = 48.11
+height = 254.567
+
+[sub_resource type="CircleShape2D" id=31]
+radius = 158.063
+
+[sub_resource type="CapsuleShape2D" id=32]
+height = 9.02075
+
+[sub_resource type="CircleShape2D" id=33]
+radius = 71.5186
+
+[sub_resource type="CapsuleShape2D" id=34]
+radius = 14.1644
+height = 19.7175
+
+[sub_resource type="StreamTexture" id=35]
+flags = 4
+load_path = "res://.import/Player.png-b933e46b6c02f5ee176339a9906c23bf.stex"
+
+[sub_resource type="CircleShape2D" id=36]
+radius = 121.48
 
 [node name="LevelScene" type="Node2D"]
 position = Vector2( -7288.59, -557.556 )
@@ -311,61 +335,21 @@ tile_data = PoolIntArray( -589832, 0, 0, -655360, 0, 0, -655352, 0, 0, -655344, 
 
 [node name="ObjectPool" type="YSort" parent="."]
 
-[node name="Player" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 1 )]
-position = Vector2( 1.2923, 0 )
-script = ExtResource( 11 )
-MAX_TRAITS = 5
-INNATE_TRAIT_BG_COLOR = Color( 0.788235, 0.188235, 0.188235, 1 )
+[node name="Spider" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 2712.77, 1036.8 )
+script = ExtResource( 27 )
+INNATE_TRAIT_BG_COLOR = Color( 0.843137, 0.203922, 0.203922, 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Player" index="0"]
-position = Vector2( 0.431534, -0.240608 )
-rotation = 1.5708
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Spider" index="0"]
+rotation = 1.57079
 shape = SubResource( 12 )
 
-[node name="player" type="Sprite" parent="ObjectPool/Player" index="1"]
-position = Vector2( 0.116547, -52.7654 )
-scale = Vector2( 0.241086, 0.230355 )
-texture = SubResource( 13 )
+[node name="Sprite" type="Sprite" parent="ObjectPool/Spider" index="1"]
+position = Vector2( 0, -1.5874 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 43 )
 
-[node name="Camera2D" type="Camera2D" parent="ObjectPool/Player" index="2"]
-position = Vector2( 0.116547, -52.1702 )
-current = true
-
-[node name="TraitsList" type="ItemList" parent="ObjectPool/Player" index="3"]
-visible = false
-margin_left = 14.227
-margin_top = 18.3784
-margin_right = 87.227
-margin_bottom = 68.3784
-items = [ "", null, false, "", null, false, "", null, false ]
-auto_height = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Player" index="4"]
-position = Vector2( 0.116547, -52.1702 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Player/TraitUiOpener" index="0"]
-position = Vector2( 0.314987, 0 )
-shape = SubResource( 14 )
-
-[node name="Bonfire" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
-position = Vector2( 1017.13, 129.051 )
-script = ExtResource( 7 )
-MAX_TRAITS = 3
-
-[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Bonfire" index="0"]
-position = Vector2( -1.19165, 5.95825 )
-rotation = 1.57079
-shape = SubResource( 15 )
-
-[node name="Sprite" type="Sprite" parent="ObjectPool/Bonfire" index="1"]
-position = Vector2( -1.51221, -13.8154 )
-scale = Vector2( 0.124737, 0.124737 )
-texture = ExtResource( 22 )
-
-[node name="TraitsList" type="ItemList" parent="ObjectPool/Bonfire" index="2"]
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Spider" index="2"]
 visible = false
 margin_left = 0.263519
 margin_right = 75.2635
@@ -374,7 +358,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EffectsList" type="ItemList" parent="ObjectPool/Bonfire" index="3"]
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Spider" index="3"]
 visible = false
 margin_left = 74.7687
 margin_top = 0.442703
@@ -385,29 +369,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Bonfire" index="4"]
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Spider" index="4"]
 modulate = Color( 0.898039, 0, 1, 1 )
 position = Vector2( 25, 25 )
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Bonfire/TraitUiOpener" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Spider/TraitUiOpener" index="0"]
 position = Vector2( -25, -25 )
-shape = SubResource( 16 )
+shape = SubResource( 13 )
 
-[node name="Volcano" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
-position = Vector2( -2446.97, 58.561 )
-script = ExtResource( 12 )
+[node name="Fly" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 2864.12, 853.499 )
+script = ExtResource( 37 )
 
-[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Volcano" index="0"]
-position = Vector2( 1.22772, -9.8219 )
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Fly" index="0"]
 rotation = 1.57079
-shape = SubResource( 17 )
+shape = SubResource( 12 )
 
-[node name="Sprite" type="Sprite" parent="ObjectPool/Volcano" index="1"]
-position = Vector2( 4.10107, -344.492 )
-texture = ExtResource( 21 )
+[node name="Sprite" type="Sprite" parent="ObjectPool/Fly" index="1"]
+position = Vector2( -1349.54, -98.9807 )
+scale = Vector2( 0.33811, 0.33811 )
+texture = ExtResource( 39 )
 
-[node name="TraitsList" type="ItemList" parent="ObjectPool/Volcano" index="2"]
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Fly" index="2"]
 visible = false
 margin_left = 0.263519
 margin_right = 75.2635
@@ -416,7 +400,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EffectsList" type="ItemList" parent="ObjectPool/Volcano" index="3"]
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Fly" index="3"]
 visible = false
 margin_left = 74.7687
 margin_top = 0.442703
@@ -427,30 +411,68 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Volcano" index="4"]
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Fly" index="4"]
 modulate = Color( 0.898039, 0, 1, 1 )
 position = Vector2( 25, 25 )
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Volcano/TraitUiOpener" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Fly/TraitUiOpener" index="0"]
+position = Vector2( -1376.87, -134.97 )
+shape = SubResource( 13 )
+
+[node name="Flower" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 2582.14, 832.856 )
+script = ExtResource( 35 )
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Flower" index="0"]
+rotation = 1.57079
+shape = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Flower" index="1"]
+texture = ExtResource( 31 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Flower" index="2"]
+visible = false
+margin_left = 0.263519
+margin_right = 75.2635
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Flower" index="3"]
+visible = false
+margin_left = 74.7687
+margin_top = 0.442703
+margin_right = 149.769
+margin_bottom = 9.4427
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Flower" index="4"]
+modulate = Color( 0.898039, 0, 1, 1 )
+position = Vector2( 25, 25 )
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Flower/TraitUiOpener" index="0"]
 position = Vector2( -25, -25 )
-rotation = 1.5708
-shape = SubResource( 18 )
+shape = SubResource( 13 )
 
-[node name="Totem" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
-position = Vector2( -2005.58, 327.352 )
-script = ExtResource( 13 )
+[node name="Towel" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 1492.5, 1700.98 )
+script = ExtResource( 29 )
 
-[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Totem" index="0"]
-position = Vector2( -0.440186, -27.728 )
-shape = SubResource( 19 )
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Towel" index="0"]
+rotation = 1.57079
+shape = SubResource( 12 )
 
-[node name="Sprite" type="Sprite" parent="ObjectPool/Totem" index="1"]
-position = Vector2( -0.651489, -97.1968 )
-scale = Vector2( 0.404422, 0.404422 )
-texture = ExtResource( 20 )
+[node name="Sprite" type="Sprite" parent="ObjectPool/Towel" index="1"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 32 )
 
-[node name="TraitsList" type="ItemList" parent="ObjectPool/Totem" index="2"]
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Towel" index="2"]
 visible = false
 margin_left = 0.263519
 margin_right = 75.2635
@@ -459,7 +481,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EffectsList" type="ItemList" parent="ObjectPool/Totem" index="3"]
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Towel" index="3"]
 visible = false
 margin_left = 74.7687
 margin_top = 0.442703
@@ -470,30 +492,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Totem" index="4"]
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Towel" index="4"]
 modulate = Color( 0.898039, 0, 1, 1 )
 position = Vector2( 25, 25 )
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Totem/TraitUiOpener" index="0"]
-position = Vector2( -25.7351, -34.5563 )
-shape = SubResource( 20 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Towel/TraitUiOpener" index="0"]
+position = Vector2( -25, -25 )
+shape = SubResource( 13 )
 
-[node name="Cave" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
-position = Vector2( 1062.45, 684.006 )
-script = ExtResource( 14 )
+[node name="Monkey" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 1920.96, 1705.46 )
+scale = Vector2( 1.01852, 0.981548 )
+script = ExtResource( 27 )
+INNATE_TRAIT_BG_COLOR = Color( 0.843137, 0.203922, 0.203922, 1 )
 
-[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Cave" index="0"]
-position = Vector2( 22.3468, 49.5822 )
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Monkey" index="0"]
+position = Vector2( -90, 0 )
 rotation = 1.57079
-shape = SubResource( 21 )
+scale = Vector2( 10, 5 )
+shape = SubResource( 12 )
 
-[node name="Sprite" type="Sprite" parent="ObjectPool/Cave" index="1"]
-position = Vector2( 21.2421, -5.81113 )
-scale = Vector2( 0.183874, 0.183874 )
-texture = ExtResource( 19 )
+[node name="Sprite" type="Sprite" parent="ObjectPool/Monkey" index="1"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 38 )
 
-[node name="TraitsList" type="ItemList" parent="ObjectPool/Cave" index="2"]
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Monkey" index="2"]
 visible = false
 margin_left = 0.263519
 margin_right = 75.2635
@@ -502,7 +526,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EffectsList" type="ItemList" parent="ObjectPool/Cave" index="3"]
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Monkey" index="3"]
 visible = false
 margin_left = 74.7687
 margin_top = 0.442703
@@ -513,32 +537,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Cave" index="4"]
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Monkey" index="4"]
 modulate = Color( 0.898039, 0, 1, 1 )
 position = Vector2( 25, 25 )
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Cave/TraitUiOpener" index="0"]
-position = Vector2( -17.3182, 21.7887 )
-shape = SubResource( 22 )
-
-[node name="Crystals" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
-visible = false
-position = Vector2( 1561.48, 635.374 )
-script = ExtResource( 16 )
-
-[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Crystals" index="0"]
-position = Vector2( 1.67261, 21.7423 )
-rotation = 1.57079
-shape = SubResource( 23 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Monkey/TraitUiOpener" index="0"]
+position = Vector2( -28.1171, -20.1483 )
+scale = Vector2( 1.5, 1 )
+shape = SubResource( 13 )
 disabled = true
 
-[node name="Sprite" type="Sprite" parent="ObjectPool/Crystals" index="1"]
-position = Vector2( -3.62012, -6.86316 )
-scale = Vector2( 0.18996, 0.18996 )
-texture = ExtResource( 18 )
+[node name="Gold" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 1968.86, 1958.19 )
+script = ExtResource( 33 )
 
-[node name="TraitsList" type="ItemList" parent="ObjectPool/Crystals" index="2"]
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Gold" index="0"]
+rotation = 1.57079
+shape = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Gold" index="1"]
+texture = ExtResource( 42 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Gold" index="2"]
 visible = false
 margin_left = 0.263519
 margin_right = 75.2635
@@ -547,7 +568,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="EffectsList" type="ItemList" parent="ObjectPool/Crystals" index="3"]
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Gold" index="3"]
 visible = false
 margin_left = 74.7687
 margin_top = 0.442703
@@ -558,23 +579,145 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Crystals" index="4"]
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Gold" index="4"]
 modulate = Color( 0.898039, 0, 1, 1 )
 position = Vector2( 25, 25 )
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Crystals/TraitUiOpener" index="0"]
-position = Vector2( -22.0597, -20.5894 )
-shape = SubResource( 24 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Gold/TraitUiOpener" index="0"]
+position = Vector2( -25, -25 )
+shape = SubResource( 13 )
+
+[node name="Native" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 1832.11, 1158.42 )
+script = ExtResource( 36 )
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Native" index="0"]
+rotation = 1.57079
+shape = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Native" index="1"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 30 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Native" index="2"]
+visible = false
+margin_left = 0.263519
+margin_right = 75.2635
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Native" index="3"]
+visible = false
+margin_left = 74.7687
+margin_top = 0.442703
+margin_right = 149.769
+margin_bottom = 9.4427
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Native" index="4"]
+modulate = Color( 0.898039, 0, 1, 1 )
+position = Vector2( 25, 25 )
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Native/TraitUiOpener" index="0"]
+position = Vector2( -25, -25 )
+shape = SubResource( 13 )
 disabled = true
+
+[node name="Web" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 2814.99, 1265.89 )
+script = ExtResource( 34 )
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Web" index="0"]
+rotation = 1.57079
+shape = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Web" index="1"]
+texture = ExtResource( 41 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Web" index="2"]
+visible = false
+margin_left = 0.263519
+margin_right = 75.2635
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Web" index="3"]
+visible = false
+margin_left = 74.7687
+margin_top = 0.442703
+margin_right = 149.769
+margin_bottom = 9.4427
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Web" index="4"]
+modulate = Color( 0.898039, 0, 1, 1 )
+position = Vector2( 25, 25 )
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Web/TraitUiOpener" index="0"]
+position = Vector2( -25, -25 )
+shape = SubResource( 13 )
+
+[node name="Bandage" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 1580.39, 1173.44 )
+script = ExtResource( 28 )
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Bandage" index="0"]
+rotation = 1.57079
+shape = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Bandage" index="1"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 40 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Bandage" index="2"]
+visible = false
+margin_left = 0.263519
+margin_right = 75.2635
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Bandage" index="3"]
+visible = false
+margin_left = 74.7687
+margin_top = 0.442703
+margin_right = 149.769
+margin_bottom = 9.4427
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Bandage" index="4"]
+modulate = Color( 0.898039, 0, 1, 1 )
+position = Vector2( 25, 25 )
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Bandage/TraitUiOpener" index="0"]
+position = Vector2( -25, -25 )
+shape = SubResource( 13 )
 
 [node name="Segul" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
-position = Vector2( -971.757, 696.468 )
+position = Vector2( 1250.15, -332.201 )
 script = ExtResource( 15 )
 
 [node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Segul" index="0"]
 rotation = 1.57079
-shape = SubResource( 33 )
+shape = SubResource( 14 )
 
 [node name="Sprite" type="Sprite" parent="ObjectPool/Segul" index="1"]
 position = Vector2( -9.16257, -40.8374 )
@@ -610,16 +753,16 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Segul/TraitUiOpener" index="0"]
 position = Vector2( 16.204, -38.4543 )
-shape = SubResource( 34 )
+shape = SubResource( 15 )
 
 [node name="Crate" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
-position = Vector2( -617.373, -16.7603 )
+position = Vector2( -636.374, -71.3071 )
 script = ExtResource( 5 )
 MAX_TRAITS = 1
 
 [node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Crate" index="0"]
 rotation = 1.57079
-shape = SubResource( 25 )
+shape = SubResource( 16 )
 
 [node name="Sprite" type="Sprite" parent="ObjectPool/Crate" index="1"]
 position = Vector2( -2.49999, -25.5 )
@@ -653,15 +796,15 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Crate/TraitUiOpener" index="0"]
 position = Vector2( -25, -25 )
-shape = SubResource( 26 )
+shape = SubResource( 17 )
 
 [node name="Boat" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
-position = Vector2( -133.696, -370.404 )
+position = Vector2( -46.152, -375.149 )
 script = ExtResource( 2 )
 
 [node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Boat" index="0"]
 rotation = 1.57079
-shape = SubResource( 27 )
+shape = SubResource( 18 )
 
 [node name="Sprite" type="Sprite" parent="ObjectPool/Boat" index="1"]
 position = Vector2( 0, -77 )
@@ -694,15 +837,15 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Boat/TraitUiOpener" index="0"]
 position = Vector2( -25, -25 )
-shape = SubResource( 28 )
+shape = SubResource( 19 )
 
 [node name="Mask" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
-position = Vector2( -1089.69, 697.355 )
+position = Vector2( 1132.22, -331.314 )
 script = ExtResource( 6 )
 
 [node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Mask" index="0"]
 rotation = 1.57079
-shape = SubResource( 29 )
+shape = SubResource( 20 )
 
 [node name="Sprite" type="Sprite" parent="ObjectPool/Mask" index="1"]
 position = Vector2( -6.30109, -60.7526 )
@@ -738,7 +881,7 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Mask/TraitUiOpener" index="0"]
 position = Vector2( -83.1136, -43.4998 )
-shape = SubResource( 30 )
+shape = SubResource( 21 )
 
 [node name="Feather" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
 visible = false
@@ -749,7 +892,7 @@ MAX_TRAITS = 1
 [node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Feather" index="0"]
 position = Vector2( 0, 1.25992 )
 rotation = 1.57079
-shape = SubResource( 31 )
+shape = SubResource( 22 )
 disabled = true
 
 [node name="Sprite" type="Sprite" parent="ObjectPool/Feather" index="1"]
@@ -784,26 +927,292 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Feather/TraitUiOpener" index="0"]
 position = Vector2( -25, -25 )
+shape = SubResource( 23 )
+disabled = true
+
+[node name="Bonfire" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 334.396, -209.363 )
+script = ExtResource( 7 )
+MAX_TRAITS = 3
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Bonfire" index="0"]
+position = Vector2( -1.19165, 5.95825 )
+rotation = 1.57079
+shape = SubResource( 24 )
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Bonfire" index="1"]
+position = Vector2( -1.51221, -13.8154 )
+scale = Vector2( 0.124737, 0.124737 )
+texture = ExtResource( 22 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Bonfire" index="2"]
+visible = false
+margin_left = 0.263519
+margin_right = 75.2635
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Bonfire" index="3"]
+visible = false
+margin_left = 74.7687
+margin_top = 0.442703
+margin_right = 149.769
+margin_bottom = 9.4427
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Bonfire" index="4"]
+modulate = Color( 0.898039, 0, 1, 1 )
+position = Vector2( 25, 25 )
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Bonfire/TraitUiOpener" index="0"]
+position = Vector2( -25, -25 )
+shape = SubResource( 25 )
+
+[node name="Volcano" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( -2395.04, 158.424 )
+script = ExtResource( 12 )
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Volcano" index="0"]
+position = Vector2( 1.22772, -9.8219 )
+rotation = 1.57079
+shape = SubResource( 26 )
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Volcano" index="1"]
+position = Vector2( 4.10107, -344.492 )
+texture = ExtResource( 21 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Volcano" index="2"]
+visible = false
+margin_left = 0.263519
+margin_right = 75.2635
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Volcano" index="3"]
+visible = false
+margin_left = 74.7687
+margin_top = 0.442703
+margin_right = 149.769
+margin_bottom = 9.4427
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Volcano" index="4"]
+modulate = Color( 0.898039, 0, 1, 1 )
+position = Vector2( 25, 25 )
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Volcano/TraitUiOpener" index="0"]
+position = Vector2( -25, -25 )
+rotation = 1.5708
+shape = SubResource( 27 )
+
+[node name="Totem" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( -1884.22, 404.173 )
+script = ExtResource( 13 )
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Totem" index="0"]
+position = Vector2( -0.440186, -27.728 )
+shape = SubResource( 28 )
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Totem" index="1"]
+position = Vector2( -0.651489, -97.1968 )
+scale = Vector2( 0.404422, 0.404422 )
+texture = ExtResource( 20 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Totem" index="2"]
+visible = false
+margin_left = 0.263519
+margin_right = 75.2635
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Totem" index="3"]
+visible = false
+margin_left = 74.7687
+margin_top = 0.442703
+margin_right = 149.769
+margin_bottom = 9.4427
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Totem" index="4"]
+modulate = Color( 0.898039, 0, 1, 1 )
+position = Vector2( 25, 25 )
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Totem/TraitUiOpener" index="0"]
+position = Vector2( -25.7351, -34.5563 )
+shape = SubResource( 29 )
+
+[node name="Cave" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+position = Vector2( 675.347, 851.641 )
+script = ExtResource( 14 )
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Cave" index="0"]
+position = Vector2( 22.3468, 49.5822 )
+rotation = 1.57079
+shape = SubResource( 30 )
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Cave" index="1"]
+position = Vector2( 21.2421, -5.81113 )
+scale = Vector2( 0.183874, 0.183874 )
+texture = ExtResource( 19 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Cave" index="2"]
+visible = false
+margin_left = 0.263519
+margin_right = 75.2635
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Cave" index="3"]
+visible = false
+margin_left = 74.7687
+margin_top = 0.442703
+margin_right = 149.769
+margin_bottom = 9.4427
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Cave" index="4"]
+modulate = Color( 0.898039, 0, 1, 1 )
+position = Vector2( 25, 25 )
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Cave/TraitUiOpener" index="0"]
+position = Vector2( -17.3182, 21.7887 )
+shape = SubResource( 31 )
+
+[node name="Crystals" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 1561.48, 635.374 )
+script = ExtResource( 16 )
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Crystals" index="0"]
+position = Vector2( 1.67261, 21.7423 )
+rotation = 1.57079
 shape = SubResource( 32 )
 disabled = true
-[connection signal="item_activated" from="ObjectPool/Player/TraitsList" to="ObjectPool/Player" method="_on_TraitsList_item_activated"]
-[connection signal="body_entered" from="ObjectPool/Player/TraitUiOpener" to="ObjectPool/Player" method="_on_TraitUiOpener_body_entered"]
-[connection signal="body_exited" from="ObjectPool/Player/TraitUiOpener" to="ObjectPool/Player" method="_on_TraitUiOpener_body_exited"]
-[connection signal="item_activated" from="ObjectPool/Bonfire/TraitsList" to="ObjectPool/Bonfire" method="_on_TraitsList_item_activated"]
-[connection signal="body_entered" from="ObjectPool/Bonfire/TraitUiOpener" to="ObjectPool/Bonfire" method="_on_TraitUiOpener_body_entered"]
-[connection signal="body_exited" from="ObjectPool/Bonfire/TraitUiOpener" to="ObjectPool/Bonfire" method="_on_TraitUiOpener_body_exited"]
-[connection signal="item_activated" from="ObjectPool/Volcano/TraitsList" to="ObjectPool/Volcano" method="_on_TraitsList_item_activated"]
-[connection signal="body_entered" from="ObjectPool/Volcano/TraitUiOpener" to="ObjectPool/Volcano" method="_on_TraitUiOpener_body_entered"]
-[connection signal="body_exited" from="ObjectPool/Volcano/TraitUiOpener" to="ObjectPool/Volcano" method="_on_TraitUiOpener_body_exited"]
-[connection signal="item_activated" from="ObjectPool/Totem/TraitsList" to="ObjectPool/Totem" method="_on_TraitsList_item_activated"]
-[connection signal="body_entered" from="ObjectPool/Totem/TraitUiOpener" to="ObjectPool/Totem" method="_on_TraitUiOpener_body_entered"]
-[connection signal="body_exited" from="ObjectPool/Totem/TraitUiOpener" to="ObjectPool/Totem" method="_on_TraitUiOpener_body_exited"]
-[connection signal="item_activated" from="ObjectPool/Cave/TraitsList" to="ObjectPool/Cave" method="_on_TraitsList_item_activated"]
-[connection signal="body_entered" from="ObjectPool/Cave/TraitUiOpener" to="ObjectPool/Cave" method="_on_TraitUiOpener_body_entered"]
-[connection signal="body_exited" from="ObjectPool/Cave/TraitUiOpener" to="ObjectPool/Cave" method="_on_TraitUiOpener_body_exited"]
-[connection signal="item_activated" from="ObjectPool/Crystals/TraitsList" to="ObjectPool/Crystals" method="_on_TraitsList_item_activated"]
-[connection signal="body_entered" from="ObjectPool/Crystals/TraitUiOpener" to="ObjectPool/Crystals" method="_on_TraitUiOpener_body_entered"]
-[connection signal="body_exited" from="ObjectPool/Crystals/TraitUiOpener" to="ObjectPool/Crystals" method="_on_TraitUiOpener_body_exited"]
+
+[node name="Sprite" type="Sprite" parent="ObjectPool/Crystals" index="1"]
+position = Vector2( -3.62012, -6.86316 )
+scale = Vector2( 0.18996, 0.18996 )
+texture = ExtResource( 18 )
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Crystals" index="2"]
+visible = false
+margin_left = 0.263519
+margin_right = 75.2635
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectsList" type="ItemList" parent="ObjectPool/Crystals" index="3"]
+visible = false
+margin_left = 74.7687
+margin_top = 0.442703
+margin_right = 149.769
+margin_bottom = 9.4427
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Crystals" index="4"]
+modulate = Color( 0.898039, 0, 1, 1 )
+position = Vector2( 25, 25 )
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Crystals/TraitUiOpener" index="0"]
+position = Vector2( -22.0597, -20.5894 )
+shape = SubResource( 33 )
+disabled = true
+
+[node name="Player" type="KinematicBody2D" parent="ObjectPool" instance=ExtResource( 1 )]
+position = Vector2( 1.2923, 0 )
+script = ExtResource( 11 )
+MAX_TRAITS = 5
+INNATE_TRAIT_BG_COLOR = Color( 0.788235, 0.188235, 0.188235, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Player" index="0"]
+position = Vector2( 0.431534, -0.240608 )
+rotation = 1.5708
+shape = SubResource( 34 )
+
+[node name="player" type="Sprite" parent="ObjectPool/Player" index="1"]
+position = Vector2( 0.116547, -52.7654 )
+scale = Vector2( 0.241086, 0.230355 )
+texture = SubResource( 35 )
+
+[node name="Camera2D" type="Camera2D" parent="ObjectPool/Player" index="2"]
+position = Vector2( 0.116547, -52.1702 )
+current = true
+
+[node name="TraitsList" type="ItemList" parent="ObjectPool/Player" index="3"]
+visible = false
+margin_left = 14.227
+margin_top = 18.3784
+margin_right = 87.227
+margin_bottom = 68.3784
+items = [ "", null, false, "", null, false, "", null, false ]
+auto_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Player" index="4"]
+position = Vector2( 0.116547, -52.1702 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Player/TraitUiOpener" index="0"]
+position = Vector2( 0.314987, 0 )
+shape = SubResource( 36 )
+[connection signal="item_activated" from="ObjectPool/Spider/TraitsList" to="ObjectPool/Spider" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Spider/TraitUiOpener" to="ObjectPool/Spider" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Spider/TraitUiOpener" to="ObjectPool/Spider" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Fly/TraitsList" to="ObjectPool/Fly" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Fly/TraitUiOpener" to="ObjectPool/Fly" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Fly/TraitUiOpener" to="ObjectPool/Fly" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Flower/TraitsList" to="ObjectPool/Flower" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Flower/TraitUiOpener" to="ObjectPool/Flower" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Flower/TraitUiOpener" to="ObjectPool/Flower" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Towel/TraitsList" to="ObjectPool/Towel" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Towel/TraitUiOpener" to="ObjectPool/Towel" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Towel/TraitUiOpener" to="ObjectPool/Towel" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Monkey/TraitsList" to="ObjectPool/Monkey" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Monkey/TraitUiOpener" to="ObjectPool/Monkey" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Monkey/TraitUiOpener" to="ObjectPool/Monkey" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Gold/TraitsList" to="ObjectPool/Gold" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Gold/TraitUiOpener" to="ObjectPool/Gold" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Gold/TraitUiOpener" to="ObjectPool/Gold" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Native/TraitsList" to="ObjectPool/Native" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Native/TraitUiOpener" to="ObjectPool/Native" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Native/TraitUiOpener" to="ObjectPool/Native" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Web/TraitsList" to="ObjectPool/Web" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Web/TraitUiOpener" to="ObjectPool/Web" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Web/TraitUiOpener" to="ObjectPool/Web" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Bandage/TraitsList" to="ObjectPool/Bandage" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Bandage/TraitUiOpener" to="ObjectPool/Bandage" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Bandage/TraitUiOpener" to="ObjectPool/Bandage" method="_on_TraitUiOpener_body_exited"]
 [connection signal="item_activated" from="ObjectPool/Segul/TraitsList" to="ObjectPool/Segul" method="_on_TraitsList_item_activated"]
 [connection signal="body_entered" from="ObjectPool/Segul/TraitUiOpener" to="ObjectPool/Segul" method="_on_TraitUiOpener_body_entered"]
 [connection signal="body_exited" from="ObjectPool/Segul/TraitUiOpener" to="ObjectPool/Segul" method="_on_TraitUiOpener_body_exited"]
@@ -819,8 +1228,52 @@ disabled = true
 [connection signal="item_activated" from="ObjectPool/Feather/TraitsList" to="ObjectPool/Feather" method="_on_TraitsList_item_activated"]
 [connection signal="body_entered" from="ObjectPool/Feather/TraitUiOpener" to="ObjectPool/Feather" method="_on_TraitUiOpener_body_entered"]
 [connection signal="body_exited" from="ObjectPool/Feather/TraitUiOpener" to="ObjectPool/Feather" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Bonfire/TraitsList" to="ObjectPool/Bonfire" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Bonfire/TraitUiOpener" to="ObjectPool/Bonfire" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Bonfire/TraitUiOpener" to="ObjectPool/Bonfire" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Volcano/TraitsList" to="ObjectPool/Volcano" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Volcano/TraitUiOpener" to="ObjectPool/Volcano" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Volcano/TraitUiOpener" to="ObjectPool/Volcano" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Totem/TraitsList" to="ObjectPool/Totem" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Totem/TraitUiOpener" to="ObjectPool/Totem" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Totem/TraitUiOpener" to="ObjectPool/Totem" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Cave/TraitsList" to="ObjectPool/Cave" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Cave/TraitUiOpener" to="ObjectPool/Cave" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Cave/TraitUiOpener" to="ObjectPool/Cave" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Crystals/TraitsList" to="ObjectPool/Crystals" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Crystals/TraitUiOpener" to="ObjectPool/Crystals" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Crystals/TraitUiOpener" to="ObjectPool/Crystals" method="_on_TraitUiOpener_body_exited"]
+[connection signal="item_activated" from="ObjectPool/Player/TraitsList" to="ObjectPool/Player" method="_on_TraitsList_item_activated"]
+[connection signal="body_entered" from="ObjectPool/Player/TraitUiOpener" to="ObjectPool/Player" method="_on_TraitUiOpener_body_entered"]
+[connection signal="body_exited" from="ObjectPool/Player/TraitUiOpener" to="ObjectPool/Player" method="_on_TraitUiOpener_body_exited"]
 
-[editable path="ObjectPool/Player"]
+[editable path="ObjectPool/Spider"]
+
+[editable path="ObjectPool/Fly"]
+
+[editable path="ObjectPool/Flower"]
+
+[editable path="ObjectPool/Towel"]
+
+[editable path="ObjectPool/Monkey"]
+
+[editable path="ObjectPool/Gold"]
+
+[editable path="ObjectPool/Native"]
+
+[editable path="ObjectPool/Web"]
+
+[editable path="ObjectPool/Bandage"]
+
+[editable path="ObjectPool/Segul"]
+
+[editable path="ObjectPool/Crate"]
+
+[editable path="ObjectPool/Boat"]
+
+[editable path="ObjectPool/Mask"]
+
+[editable path="ObjectPool/Feather"]
 
 [editable path="ObjectPool/Bonfire"]
 
@@ -832,12 +1285,4 @@ disabled = true
 
 [editable path="ObjectPool/Crystals"]
 
-[editable path="ObjectPool/Segul"]
-
-[editable path="ObjectPool/Crate"]
-
-[editable path="ObjectPool/Boat"]
-
-[editable path="ObjectPool/Mask"]
-
-[editable path="ObjectPool/Feather"]
+[editable path="ObjectPool/Player"]
