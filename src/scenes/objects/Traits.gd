@@ -24,7 +24,7 @@ enum Trait {
 	HEAVY,
 	NERVOUS,
 	LIGHT,
-	MAGICAL
+	MAGICAL,
 }
 
 # when traits are combined, they can create an effect
@@ -34,7 +34,12 @@ enum Effect {
 	SINKING,
 	KILLING,
 	BROKEN,
-	ERUPTING
+	ERUPTING,
+	FLOATING,
+	LAYING,
+	HORRIFIYNG,
+	AMUSING,
+	CALMED
 }
 
 # list of traits that cannot be in the same object and must annihilate

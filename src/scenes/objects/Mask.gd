@@ -1,16 +1,15 @@
 extends AbstractObject
 class_name Mask
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	innate_traits.append(Traits.Trait.METALLIC)
-	fill_ui_lists()
+	set_effect(Traits.Effect.AMUSING)
+	add_trait(Traits.Trait.METALLIC)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _check_win_conditions():
+	if (traits + innate_traits).has(Traits.Trait.ANGRY) :
+		return Traits.Effect.HORRIFIYNG
+	elif !((traits + innate_traits).has(Traits.Trait.EMPTY)):
+		return Traits.Effect.AMUSING
+	else:
+		return null
+
