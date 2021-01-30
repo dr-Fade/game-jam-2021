@@ -1,5 +1,5 @@
 extends AbstractObject
-class_name Bonfire
+class_name bonfire2
 
 func _ready():
 	add_trait(Traits.Trait.WET)

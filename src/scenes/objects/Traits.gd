@@ -51,7 +51,9 @@ enum Effect {
 	ROATING,
 	SLEEPING,
 	SOOTHING,
-	SATURATED
+	SATURATED,
+	SHINING,
+	DARKENED,
 }
 
 # list of traits that cannot be in the same object and must annihilate
