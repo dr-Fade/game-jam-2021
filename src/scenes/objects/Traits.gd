@@ -14,7 +14,9 @@ enum Trait {
 	POISONOUS,
 	HEALING,
 	HOT,
+	COLD,
 	WET,
+	DRY,
 	SHARP,
 	DULL,
 	STICKY,
@@ -25,7 +27,14 @@ enum Trait {
 	NERVOUS,
 	LIGHT,
 	MAGICAL,
-}
+
+	COTTON,
+	
+	NASTY,
+	GRAY
+	BRIGHT,
+	DIM,
+	SALTY}
 
 # when traits are combined, they can create an effect
 enum Effect {
@@ -39,8 +48,15 @@ enum Effect {
 	LAYING,
 	HORRIFIYNG,
 	AMUSING,
-	CALMED
-}
+	CALMED,
+	SLEEPING,
+	SOOTHING,
+	SATURATED,
+	WOODING,
+	HEALING,
+	BLOOMING,
+	ROATING,	
+	}
 
 # list of traits that cannot be in the same object and must annihilate
 export var annihilation_map = [

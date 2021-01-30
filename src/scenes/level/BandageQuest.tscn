@@ -1,14 +1,23 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/objects/Bandage.gd" type="Script" id=1]
 [ext_resource path="res://scenes/character/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/objects/Object.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/textures/temp_Textures/Spikes.png" type="Texture" id=4]
-[ext_resource path="res://assets/textures/temp_Textures/bandage-activity-game-sport-512.png" type="Texture" id=5]
+[ext_resource path="res://assets/textures/temp_Textures/flower.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/temp_Textures/spider.png" type="Texture" id=5]
 [ext_resource path="res://assets/textures/ground_atlas.png" type="Texture" id=6]
 [ext_resource path="res://assets/textures/tile_2.png" type="Texture" id=7]
-[ext_resource path="res://scenes/objects/Spikes.gd" type="Script" id=8]
+[ext_resource path="res://assets/textures/temp_Textures/fly.png" type="Texture" id=8]
 [ext_resource path="res://scenes/singletons/ObjectTrasformator.gd" type="Script" id=9]
+[ext_resource path="res://assets/textures/temp_Textures/bandage-activity-game-sport-512.png" type="Texture" id=10]
+[ext_resource path="res://assets/textures/temp_Textures/towel.png" type="Texture" id=11]
+[ext_resource path="res://assets/textures/temp_Textures/citizen.png" type="Texture" id=12]
+[ext_resource path="res://assets/textures/temp_Textures/gold.png" type="Texture" id=13]
+[ext_resource path="res://assets/textures/temp_Textures/monkey.png" type="Texture" id=14]
+[ext_resource path="res://assets/textures/temp_Textures/web.png" type="Texture" id=15]
+[ext_resource path="res://scenes/objects/Native.gd" type="Script" id=16]
+[ext_resource path="res://scenes/objects/Fly.gd" type="Script" id=17]
+[ext_resource path="res://scenes/objects/Flower.gd" type="Script" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 128, 0, 0, 64, 0, 64, 64, 64, 64, 64, 64, 64, 128, 64, 128 )
@@ -244,7 +253,7 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 } ]
 1/z_index = 0
 
-[node name="LevelScene" type="Node2D"]
+[node name="BandageQuest" type="Node2D"]
 script = ExtResource( 9 )
 
 [node name="TileMap_GROUND" type="TileMap" parent="."]
@@ -263,34 +272,99 @@ tile_data = PoolIntArray( -1114136, 0, 0, -1114128, 0, 0, -1114120, 0, 0, -11796
 [node name="ObjectPool" type="YSort" parent="."]
 position = Vector2( 79.37, 39.685 )
 
-[node name="Spikes" parent="ObjectPool" instance=ExtResource( 3 )]
-position = Vector2( 721.134, 169.299 )
-script = ExtResource( 8 )
-INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
-
-[node name="Sprite" parent="ObjectPool/Spikes" index="1"]
-position = Vector2( 0, -36 )
-texture = ExtResource( 4 )
-
 [node name="Player" parent="ObjectPool" instance=ExtResource( 2 )]
-position = Vector2( 1.2923, 0 )
+position = Vector2( -97.4858, -38.7103 )
 MAX_TRAITS = 5
 INNATE_TRAIT_BG_COLOR = Color( 0.788235, 0.188235, 0.188235, 1 )
 
 [node name="TraitsList" parent="ObjectPool/Player" index="3"]
 items = [ "", null, false, "", null, false, "", null, false ]
 
-[node name="Bandage" parent="." instance=ExtResource( 3 )]
-position = Vector2( 218.806, 472.62 )
+[node name="Bandage" parent="ObjectPool" instance=ExtResource( 3 )]
+position = Vector2( -84.6862, 311.467 )
 script = ExtResource( 1 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
-[node name="Sprite" parent="Bandage" index="1"]
+[node name="Sprite" parent="ObjectPool/Bandage" index="1"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="Spider" parent="ObjectPool" instance=ExtResource( 3 )]
+position = Vector2( 1047.69, 174.829 )
+
+[node name="Sprite" parent="ObjectPool/Spider" index="1"]
+position = Vector2( 0, -1.5874 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 
-[editable path="ObjectPool/Spikes"]
+[node name="Fly" parent="ObjectPool" instance=ExtResource( 3 )]
+position = Vector2( 671.636, 91.9125 )
+script = ExtResource( 17 )
+INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
+
+[node name="Sprite" parent="ObjectPool/Fly" index="1"]
+position = Vector2( 6.34961, 3.1748 )
+texture = ExtResource( 8 )
+
+[node name="Flower" parent="ObjectPool" instance=ExtResource( 3 )]
+position = Vector2( 917.058, -29.1167 )
+script = ExtResource( 18 )
+INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
+
+[node name="Sprite" parent="ObjectPool/Flower" index="1"]
+texture = ExtResource( 4 )
+
+[node name="Towel" parent="ObjectPool" instance=ExtResource( 3 )]
+position = Vector2( 89.3415, 759.638 )
+
+[node name="Sprite" parent="ObjectPool/Towel" index="1"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="Monkey" parent="ObjectPool" instance=ExtResource( 3 )]
+position = Vector2( 744.938, 804.085 )
+
+[node name="Sprite" parent="ObjectPool/Monkey" index="1"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 14 )
+
+[node name="Gold" parent="ObjectPool" instance=ExtResource( 3 )]
+position = Vector2( 508.555, 789.854 )
+
+[node name="Sprite" parent="ObjectPool/Gold" index="1"]
+texture = ExtResource( 13 )
+
+[node name="Native" parent="ObjectPool" instance=ExtResource( 3 )]
+position = Vector2( 167.028, 296.451 )
+script = ExtResource( 16 )
+INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
+
+[node name="Sprite" parent="ObjectPool/Native" index="1"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 12 )
+
+[node name="Web" parent="ObjectPool" instance=ExtResource( 3 )]
+position = Vector2( 1149.91, 403.916 )
+
+[node name="Sprite" parent="ObjectPool/Web" index="1"]
+texture = ExtResource( 15 )
 
 [editable path="ObjectPool/Player"]
 
-[editable path="Bandage"]
+[editable path="ObjectPool/Bandage"]
+
+[editable path="ObjectPool/Spider"]
+
+[editable path="ObjectPool/Fly"]
+
+[editable path="ObjectPool/Flower"]
+
+[editable path="ObjectPool/Towel"]
+
+[editable path="ObjectPool/Monkey"]
+
+[editable path="ObjectPool/Gold"]
+
+[editable path="ObjectPool/Native"]
+
+[editable path="ObjectPool/Web"]
