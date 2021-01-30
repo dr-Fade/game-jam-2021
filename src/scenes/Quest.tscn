@@ -1,21 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/misc/Quest.gd" type="Script" id=1]
 [ext_resource path="res://assets/textures/UI/Quest_Plack_background.png" type="Texture" id=2]
 [ext_resource path="res://assets/textures/UI/Check.png" type="Texture" id=3]
+[ext_resource path="res://assets/sfx/blip-effect.wav" type="AudioStream" id=4]
 
 [node name="Quest" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="QuestBackgorund" type="Sprite" parent="."]
-position = Vector2( 1222, 88.8123 )
+position = Vector2( 885.863, 91.827 )
 texture = ExtResource( 2 )
 
 [node name="To Do List" type="RichTextLabel" parent="."]
-margin_left = 1174.88
-margin_top = 24.6421
-margin_right = 1249.88
-margin_bottom = 40.6421
+margin_left = 838.743
+margin_top = 27.6568
+margin_right = 913.743
+margin_bottom = 43.6568
 rect_pivot_offset = Vector2( 31.2477, 3.4048 )
 text = "TO DO LIST"
 __meta__ = {
@@ -23,30 +24,30 @@ __meta__ = {
 }
 
 [node name="Fix sinking boat" type="RichTextLabel" parent="."]
-margin_left = 1141.3
-margin_top = 52.7299
-margin_right = 1264.3
-margin_bottom = 73.7299
+margin_left = 805.163
+margin_top = 55.7446
+margin_right = 928.163
+margin_bottom = 76.7446
 text = "Fix sinking boat"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Light signal bonfire" type="RichTextLabel" parent="."]
-margin_left = 1142.46
-margin_top = 78.0953
-margin_right = 1277.46
-margin_bottom = 99.0953
+margin_left = 806.323
+margin_top = 81.11
+margin_right = 941.323
+margin_bottom = 102.11
 text = "Light signal bonfire"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HealWoundedNative" type="RichTextLabel" parent="."]
-margin_left = 1143.63
-margin_top = 102.104
-margin_right = 1286.63
-margin_bottom = 120.104
+margin_left = 807.493
+margin_top = 105.119
+margin_right = 950.493
+margin_bottom = 123.119
 text = "Heal wounded native"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -54,15 +55,20 @@ __meta__ = {
 
 [node name="BoatCheck" type="Sprite" parent="."]
 visible = false
-position = Vector2( 1126.04, 55.9988 )
+position = Vector2( 790.219, 59.0939 )
 texture = ExtResource( 3 )
 
 [node name="BonfireCheck" type="Sprite" parent="."]
 visible = false
-position = Vector2( 1128.69, 83.3496 )
+position = Vector2( 792.869, 86.4447 )
 texture = ExtResource( 3 )
 
 [node name="NativeCheck" type="Sprite" parent="."]
 visible = false
-position = Vector2( 1130.12, 107.388 )
+position = Vector2( 794.299, 110.483 )
 texture = ExtResource( 3 )
+
+[node name="Effect" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 350, 0 )
+stream = ExtResource( 4 )
+volume_db = -10.0

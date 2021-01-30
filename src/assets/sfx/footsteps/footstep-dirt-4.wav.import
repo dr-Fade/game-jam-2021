@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep-dirt-4.wav-102fbb76d065e715a8fd9218efbbacfe.sample"
+
+[deps]
+
+source_file="res://assets/sfx/footsteps/footstep-dirt-4.wav"
+dest_files=[ "res://.import/footstep-dirt-4.wav-102fbb76d065e715a8fd9218efbbacfe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

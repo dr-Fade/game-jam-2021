@@ -40,6 +40,11 @@ _global_script_classes=[ {
 "path": "res://scenes/objects/Crate.gd"
 }, {
 "base": "AbstractObject",
+"class": "Crystals",
+"language": "GDScript",
+"path": "res://scenes/objects/Crystals.gd"
+}, {
+"base": "AbstractObject",
 "class": "Feather",
 "language": "GDScript",
 "path": "res://scenes/objects/Feather.gd"
@@ -85,9 +90,9 @@ _global_script_classes=[ {
 "path": "res://scenes/misc/Quest.gd"
 }, {
 "base": "AbstractObject",
-"class": "Segul",
+"class": "Seagul",
 "language": "GDScript",
-"path": "res://scenes/objects/Segul.gd"
+"path": "res://scenes/objects/Seagul.gd"
 }, {
 "base": "AbstractObject",
 "class": "Spider",
@@ -116,6 +121,7 @@ _global_script_class_icons={
 "Boat": "",
 "Bonfire": "",
 "Crate": "",
+"Crystals": "",
 "Feather": "",
 "Flower": "",
 "Fly": "",
@@ -125,7 +131,7 @@ _global_script_class_icons={
 "Native": "",
 "ObjectTransformator": "",
 "Quest": "",
-"Segul": "",
+"Seagul": "",
 "Spider": "",
 "Spikes": "",
 "Towel": "",
@@ -147,6 +153,11 @@ Traits="*res://scenes/objects/Traits.gd"
 [debug]
 
 settings/stdout/print_fps=true
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 

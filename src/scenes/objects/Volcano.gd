@@ -8,9 +8,9 @@ func _ready():
 
 func _check_win_conditions():
 	if get_traits().has(Traits.Trait.AGGRESSIVE):
-		make_all_traits_innate()
 		return Traits.Effect.ERUPTING
 	else:
+		$Lava.playing = false
 		return Traits.Effect.SLEEPING
 
 func stop_erupting():

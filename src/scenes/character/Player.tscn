@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/character/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Quest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/music/ukulele-loop.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/sfx/shore-noises.ogg" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 14.1644
@@ -43,7 +45,7 @@ __meta__ = {
 }
 
 [node name="Quest" parent="." instance=ExtResource( 2 )]
-position = Vector2( -856.93, -347.243 )
+position = Vector2( -512, -352 )
 
 [node name="TraitUiOpener" type="Area2D" parent="."]
 position = Vector2( 0.116547, -52.1702 )
@@ -51,6 +53,17 @@ position = Vector2( 0.116547, -52.1702 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TraitUiOpener"]
 position = Vector2( 0.314987, 0 )
 shape = SubResource( 3 )
+
+[node name="Ukulele" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -25.0
+autoplay = true
+bus = "Ukulele"
+
+[node name="Waves" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -15.0
+autoplay = true
 [connection signal="item_activated" from="TraitsList" to="." method="_on_TraitsList_item_activated"]
 [connection signal="body_entered" from="TraitUiOpener" to="." method="_on_TraitUiOpener_body_entered"]
 [connection signal="body_exited" from="TraitUiOpener" to="." method="_on_TraitUiOpener_body_exited"]

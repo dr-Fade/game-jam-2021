@@ -4,11 +4,9 @@ var obj : AbstractObject
 var peer_object: AbstractObject = null
 
 func _ready():
-	traits.append(Traits.Trait.HOT)
-	traits.append(Traits.Trait.BRIGHT)
 	traits.append(Traits.Trait.EMPTY)
-	traits.append(Traits.Trait.WOODEN)
-	traits.append(Traits.Trait.LIGHT)
+	traits.append(Traits.Trait.EMPTY)
+	traits.append(Traits.Trait.EMPTY)
 	fill_ui_lists()
 
 func _physics_process(delta) -> void:

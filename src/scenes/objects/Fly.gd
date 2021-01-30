@@ -1,16 +1,11 @@
 extends AbstractObject
 class_name Fly
 
+onready var spider = get_parent().find_node("Spider")
+
 func _ready():
-	visible = false
-	$ObjectCollision.disabled = true
-	$EffectsList.free()
+	innate_traits.append(Traits.Trait.PESKY)
+	despawn()
 
-	add_trait(Traits.Trait.EMPTY)
-	add_trait(Traits.Trait.EMPTY)
-
-func _check_win_conditions():
-	return null
-	
-func _physics_process(delta) -> void:
-	rotate(delta)
+func _do_on_spawn():
+	spider.make_web()

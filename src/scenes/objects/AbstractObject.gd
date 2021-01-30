@@ -11,6 +11,7 @@ var effect = null
 
 onready var player_object = get_owner().find_node("Player")
 onready var quest_checks = player_object.find_node("Quest")
+onready var quest_sfx = quest_checks.find_node("Effect")
 
 func fill_ui_lists():
 	$TraitsList.clear()
@@ -52,13 +53,30 @@ func _check_win_conditions():
 
 func set_effect(new_effect):
 	effect = new_effect
+	fill_ui_lists()
 
 func complete_quest(quest_check):
 	make_all_traits_innate()
+	quest_sfx.playing = false
 	quest_check.visible = true
+	quest_sfx.playing = true
 
 func traits_not_changed(new_innate_traits, new_traits):
 	return new_innate_traits.size() == innate_traits.size() and new_traits.size() == traits.size()
+
+func spawn():
+	visible = true
+	$ObjectCollision.disabled = false
+	$TraitUiOpener/CollisionShape2D.disabled = false
+	_do_on_spawn()
+
+func _do_on_spawn():
+	pass
+
+func despawn():
+	visible = false
+	$ObjectCollision.disabled = true
+	$TraitUiOpener/CollisionShape2D.disabled = true
 
 func remove_trait(trait):
 	var index = traits.find(trait)
@@ -100,6 +118,7 @@ func hide_lists():
 func _on_TraitUiOpener_body_entered(body):
 	if body == player_object:
 		body.show_lists()
+		body.peer_object = self
 		show_lists()
 
 func _on_TraitUiOpener_body_exited(body):

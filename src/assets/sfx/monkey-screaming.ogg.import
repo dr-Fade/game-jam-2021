@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/monkey-screaming.ogg-5596085201b6535f3dde352b5d984711.oggstr"
+
+[deps]
+
+source_file="res://assets/sfx/monkey-screaming.ogg"
+dest_files=[ "res://.import/monkey-screaming.ogg-5596085201b6535f3dde352b5d984711.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -10,7 +10,7 @@ func _ready():
 
 func _check_win_conditions():
 	if get_traits().has(Traits.Trait.WET):
-		crystals.show_up()
+		crystals.spawn()
 		make_all_traits_innate()
 		return Traits.Effect.SATURATED
 	else:

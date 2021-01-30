@@ -18,7 +18,6 @@ enum Trait {
 	WET,
 	DRY,
 	SHARP,
-	DULL,
 	STICKY,
 	AGGRESSIVE,
 	CALM,
@@ -31,8 +30,12 @@ enum Trait {
 	NASTY,
 	GRAY
 	BRIGHT,
-	DIM,
-	SALTY}
+	SALTY,
+	PESKY,
+	HUNGRY,
+	DIRTY,
+	SHINY
+}
 
 # when traits are combined, they can create an effect
 enum Effect {
@@ -53,14 +56,18 @@ enum Effect {
 	SATURATED,
 	HEALING,
 	BLOOMING,
-	ROATING,
+	ROTTING,
 	DEACTIVATED,
 	EXTINGUISHED
 	SHINING,
-	DARKENED,
-	WOUNDING,
+	WOUNDED,
 	UNCOOPEREATING,
-	WAITING
+	WAITING,
+	SCARED,
+	HUNTING,
+	UNAPPEALING,
+	APPEALING,
+	PROTECTING
 }
 
 # list of traits that cannot be in the same object and must annihilate
@@ -73,7 +80,7 @@ export var annihilation_map = [
 
 # list of traits that transform into another trait
 export var synergy_map = {
-	#Vector2(Trait.SHARP, Trait.DULL): Trait.DULL,
+
 }
 
 # list of traits that cannot be in the same object and must NOT annihilate

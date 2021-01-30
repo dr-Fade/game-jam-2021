@@ -1,14 +1,14 @@
 extends AbstractObject
 class_name Gold
 
+onready var monkey = get_parent().find_node("Monkey")
+
 func _ready():
-	set_effect(Traits.Effect.DARKENED)
-	add_trait(Traits.Trait.EMPTY)
-	add_trait(Traits.Trait.EMPTY)
+	set_effect(Traits.Effect.UNAPPEALING)
+	add_trait(Traits.Trait.DIRTY)
 
 func _check_win_conditions():
-	if traits.has(Traits.Trait.COLD):
-		get_parent().find_node("Monkey").find_node("ObjectCollision").disabled = true
-		get_parent().find_node("Monkey").rotate(90)
-		return Traits.Effect.SHINING
-	return Traits.Effect.DARKENED
+	if traits.has(Traits.Trait.SHINY):
+		monkey.get_to_gold(position)
+		return Traits.Effect.APPEALING
+	return Traits.Effect.UNAPPEALING
