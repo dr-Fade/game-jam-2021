@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/objects/AbstractObject.gd" type="Script" id=1]
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 13.9634
 height = 58.0713
 
@@ -15,7 +15,7 @@ INNATE_TRAIT_BG_COLOR = Color( 0.843137, 0.203922, 0.203922, 1 )
 
 [node name="ObjectCollision" type="CollisionShape2D" parent="."]
 rotation = 1.57079
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
