@@ -38,10 +38,7 @@ func get_traits():
 	return innate_traits + traits
 
 func check_win_conditions():
-	if traits.has(Traits.Trait.EMPTY):
-		return Traits.Effect.UNDEF
-	else:
-		return _check_win_conditions()
+	return _check_win_conditions()
 
 func _check_win_conditions():
 	return effect
