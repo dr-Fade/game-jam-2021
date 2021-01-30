@@ -38,6 +38,11 @@ func add_trait(new_trait):
 func get_traits():
 	return innate_traits + traits
 
+func make_all_traits_innate():
+	innate_traits += traits
+	traits.clear()
+	fill_ui_lists()
+
 func check_win_conditions():
 	return _check_win_conditions()
 

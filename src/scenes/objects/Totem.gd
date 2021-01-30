@@ -3,16 +3,16 @@ extends AbstractObject
 onready var volcano = get_owner().find_node("Volcano")
 
 func _ready():
-	innate_traits.append(Traits.Trait.CALM)
-	traits.append(Traits.Trait.EMPTY)
+	add_trait(Traits.Trait.EMPTY)
+	add_trait(Traits.Trait.EMPTY)
+	effect = Traits.Effect.DEACTIVATED
 	fill_ui_lists()
 
 func _check_win_conditions():
-	if traits.has(Traits.Trait.MAGICAL):
+	if traits.has(Traits.Trait.MAGICAL) \
+	and traits.has(Traits.Trait.CALM) :
 		volcano.stop_erupting()
-		innate_traits += traits
-		traits.clear()
-		fill_ui_lists()
+		make_all_traits_innate()
 		return Traits.Effect.SOOTHING
 	else:
-		return null
+		return Traits.Effect.DEACTIVATED
