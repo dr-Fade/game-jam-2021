@@ -98,11 +98,6 @@ _global_script_classes=[ {
 "class": "Web",
 "language": "GDScript",
 "path": "res://scenes/objects/Web.gd"
-}, {
-"base": "AbstractObject",
-"class": "bonfire2",
-"language": "GDScript",
-"path": "res://scenes/objects/Bonfire2.gd"
 } ]
 _global_script_class_icons={
 "AbstractObject": "",
@@ -122,8 +117,7 @@ _global_script_class_icons={
 "Segul": "",
 "Spikes": "",
 "Towel": "",
-"Web": "",
-"bonfire2": ""
+"Web": ""
 }
 
 [application]
@@ -141,6 +135,13 @@ Traits="*res://scenes/objects/Traits.gd"
 [debug]
 
 settings/stdout/print_fps=true
+
+[display]
+
+window/size/width=1366
+window/size/height=768
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 
