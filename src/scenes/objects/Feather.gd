@@ -1,6 +1,7 @@
 extends AbstractObject
 class_name Feather
 
+
 func _ready():
 	set_effect(Traits.Effect.LAYING)
 	add_trait(Traits.Trait.LIGHT)
@@ -11,3 +12,7 @@ func _check_win_conditions():
 	else:
 		return Traits.Effect.LAYING
 
+func show_up():
+	visible = true
+	$ObjectCollision.disabled = false
+	$TraitUiOpener/CollisionShape2D.disabled = false
