@@ -52,11 +52,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 3 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -73,11 +68,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 3/tile_mode = 0
 3/occluder_offset = Vector2( 0, 0 )
 3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 4 )
-3/shape_one_way = false
-3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -94,11 +84,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 4/tile_mode = 0
 4/occluder_offset = Vector2( 0, 0 )
 4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 5 )
-4/shape_one_way = false
-4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -115,10 +100,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 5/tile_mode = 0
 5/occluder_offset = Vector2( 0, 0 )
 5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
 5/shapes = [  ]
 5/z_index = 0
 7/name = "ground_atlas.png 7"
@@ -129,11 +110,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 7/tile_mode = 0
 7/occluder_offset = Vector2( 0, 0 )
 7/navigation_offset = Vector2( 0, 0 )
-7/shape_offset = Vector2( 0, 0 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 6 )
-7/shape_one_way = false
-7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -150,11 +126,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 8/tile_mode = 0
 8/occluder_offset = Vector2( 0, 0 )
 8/navigation_offset = Vector2( 0, 0 )
-8/shape_offset = Vector2( 0, 0 )
-8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape = SubResource( 7 )
-8/shape_one_way = false
-8/shape_one_way_margin = 1.0
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -171,11 +142,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 9/tile_mode = 0
 9/occluder_offset = Vector2( 0, 0 )
 9/navigation_offset = Vector2( 0, 0 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape = SubResource( 8 )
-9/shape_one_way = false
-9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -192,11 +158,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 10/tile_mode = 0
 10/occluder_offset = Vector2( 0, 0 )
 10/navigation_offset = Vector2( 0, 0 )
-10/shape_offset = Vector2( 0, 0 )
-10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-10/shape = SubResource( 1 )
-10/shape_one_way = false
-10/shape_one_way_margin = 1.0
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -213,11 +174,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 11/tile_mode = 0
 11/occluder_offset = Vector2( 0, 0 )
 11/navigation_offset = Vector2( 0, 0 )
-11/shape_offset = Vector2( 0, 0 )
-11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-11/shape = SubResource( 2 )
-11/shape_one_way = false
-11/shape_one_way_margin = 1.0
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -239,11 +195,6 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 10 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -260,32 +211,32 @@ height = 58.0713
 [sub_resource type="CircleShape2D" id=13]
 radius = 100.569
 
-[sub_resource type="CapsuleShape2D" id=16]
+[sub_resource type="CapsuleShape2D" id=14]
 radius = 9.9722
 height = 58.0713
 
-[sub_resource type="CircleShape2D" id=17]
+[sub_resource type="CircleShape2D" id=15]
 radius = 127.226
 
-[sub_resource type="CapsuleShape2D" id=18]
+[sub_resource type="CapsuleShape2D" id=16]
 radius = 23.8274
 height = 193.276
 
-[sub_resource type="CircleShape2D" id=19]
+[sub_resource type="CircleShape2D" id=17]
 radius = 195.984
 
-[sub_resource type="CapsuleShape2D" id=20]
+[sub_resource type="CapsuleShape2D" id=18]
 radius = 9.9722
 height = 47.8491
 
-[sub_resource type="CircleShape2D" id=21]
+[sub_resource type="CircleShape2D" id=19]
 radius = 114.715
 
-[sub_resource type="CapsuleShape2D" id=14]
+[sub_resource type="CapsuleShape2D" id=20]
 radius = 9.9722
 height = 47.682
 
-[sub_resource type="CircleShape2D" id=15]
+[sub_resource type="CircleShape2D" id=21]
 radius = 60.1625
 
 [node name="LevelScene" type="Node2D"]
@@ -342,7 +293,7 @@ MAX_TRAITS = 1
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="ObjectCollision" parent="ObjectPool/Crate" index="0"]
-shape = SubResource( 16 )
+shape = SubResource( 14 )
 
 [node name="Sprite" parent="ObjectPool/Crate" index="1"]
 position = Vector2( -2.49999, -25.5 )
@@ -350,7 +301,7 @@ scale = Vector2( 0.65493, 0.628379 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Crate/TraitUiOpener" index="0"]
-shape = SubResource( 17 )
+shape = SubResource( 15 )
 
 [node name="Spikes" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 721.134, 169.299 )
@@ -375,14 +326,14 @@ script = ExtResource( 5 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="ObjectCollision" parent="ObjectPool/Boat" index="0"]
-shape = SubResource( 18 )
+shape = SubResource( 16 )
 
 [node name="Sprite" parent="ObjectPool/Boat" index="1"]
 position = Vector2( 0, -77 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Boat/TraitUiOpener" index="0"]
-shape = SubResource( 19 )
+shape = SubResource( 17 )
 
 [node name="Mask" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 248.568, 418.912 )
@@ -390,7 +341,7 @@ script = ExtResource( 15 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="ObjectCollision" parent="ObjectPool/Mask" index="0"]
-shape = SubResource( 20 )
+shape = SubResource( 18 )
 
 [node name="Sprite" parent="ObjectPool/Mask" index="1"]
 position = Vector2( -6.30109, -60.7526 )
@@ -411,7 +362,7 @@ margin_bottom = 18.9671
 
 [node name="CollisionShape2D" parent="ObjectPool/Mask/TraitUiOpener" index="0"]
 position = Vector2( -83.1136, -43.4998 )
-shape = SubResource( 21 )
+shape = SubResource( 19 )
 
 [node name="Feather" parent="ObjectPool" instance=ExtResource( 2 )]
 visible = false
@@ -422,7 +373,7 @@ INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="ObjectCollision" parent="ObjectPool/Feather" index="0"]
 position = Vector2( 0, 1.25992 )
-shape = SubResource( 14 )
+shape = SubResource( 20 )
 disabled = true
 
 [node name="Sprite" parent="ObjectPool/Feather" index="1"]
@@ -431,7 +382,7 @@ scale = Vector2( 0.591395, 0.53978 )
 texture = ExtResource( 13 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Feather/TraitUiOpener" index="0"]
-shape = SubResource( 15 )
+shape = SubResource( 21 )
 disabled = true
 
 [node name="ObjectTranformator" parent="." instance=ExtResource( 18 )]
