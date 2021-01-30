@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://scenes/objects/Boat.gd"
 }, {
 "base": "AbstractObject",
+"class": "Bonfire",
+"language": "GDScript",
+"path": "res://scenes/objects/Bonfire.gd"
+}, {
+"base": "AbstractObject",
 "class": "Crate",
 "language": "GDScript",
 "path": "res://scenes/objects/Crate.gd"
@@ -48,6 +53,11 @@ _global_script_classes=[ {
 "class": "Fly",
 "language": "GDScript",
 "path": "res://scenes/objects/Fly.gd"
+}, {
+"base": "AbstractObject",
+"class": "Gold",
+"language": "GDScript",
+"path": "res://scenes/objects/Gold.gd"
 }, {
 "base": "AbstractObject",
 "class": "Mask",
@@ -73,27 +83,47 @@ _global_script_classes=[ {
 "class": "Spikes",
 "language": "GDScript",
 "path": "res://scenes/objects/Spikes.gd"
+}, {
+"base": "AbstractObject",
+"class": "Towel",
+"language": "GDScript",
+"path": "res://scenes/objects/Towel.gd"
+}, {
+"base": "AbstractObject",
+"class": "Web",
+"language": "GDScript",
+"path": "res://scenes/objects/Web.gd"
+}, {
+"base": "AbstractObject",
+"class": "bonfire2",
+"language": "GDScript",
+"path": "res://scenes/objects/Bonfire2.gd"
 } ]
 _global_script_class_icons={
 "AbstractObject": "",
 "Actor": "",
 "Bandage": "",
 "Boat": "",
+"Bonfire": "",
 "Crate": "",
 "Feather": "",
 "Flower": "",
 "Fly": "",
+"Gold": "",
 "Mask": "",
 "Native": "",
 "ObjectTransformator": "",
 "Segul": "",
-"Spikes": ""
+"Spikes": "",
+"Towel": "",
+"Web": "",
+"bonfire2": ""
 }
 
 [application]
 
 config/name="Random-game"
-run/main_scene="res://scenes/level/BonfireQuest.tscn"
+run/main_scene="res://scenes/effects/FIRE.tscn"
 boot_splash/image="res://icon.png"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"

@@ -51,12 +51,16 @@ enum Effect {
 	CALMED,
 	SLEEPING,
 	SOOTHING,
+	DRIED,
 	SATURATED,
-	WOODING,
 	HEALING,
 	BLOOMING,
-	ROATING,	
-	}
+	ROATING,
+	DEACTIVATED,
+	EXTINGUISHED
+	SHINING,
+	DARKENED,
+}
 
 # list of traits that cannot be in the same object and must annihilate
 export var annihilation_map = [

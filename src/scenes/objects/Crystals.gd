@@ -1,6 +1,7 @@
 extends AbstractObject
 
 func _ready():
+	add_trait(Traits.Trait.MAGICAL)
 	add_trait(Traits.Trait.BRIGHT)
 
 func show_up():

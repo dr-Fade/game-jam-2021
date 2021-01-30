@@ -3,10 +3,10 @@
 [ext_resource path="res://scenes/objects/AbstractObject.gd" type="Script" id=1]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 13.9634
-height = 58.0713
+radius = 9.9722
+height = 15.5854
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=26]
 radius = 127.226
 
 [node name="Object" type="KinematicBody2D"]
@@ -46,7 +46,7 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TraitUiOpener"]
 position = Vector2( -25, -25 )
-shape = SubResource( 2 )
+shape = SubResource( 26 )
 [connection signal="item_activated" from="TraitsList" to="." method="_on_TraitsList_item_activated"]
 [connection signal="body_entered" from="TraitUiOpener" to="." method="_on_TraitUiOpener_body_entered"]
 [connection signal="body_exited" from="TraitUiOpener" to="." method="_on_TraitUiOpener_body_exited"]
