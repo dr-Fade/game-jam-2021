@@ -58,6 +58,8 @@ enum Effect {
 	ROATING,
 	DEACTIVATED,
 	EXTINGUISHED
+	SHINING,
+	DARKENED,
 }
 
 # list of traits that cannot be in the same object and must annihilate
