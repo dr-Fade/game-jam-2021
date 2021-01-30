@@ -97,10 +97,12 @@ func hide_lists():
 
 func _on_TraitUiOpener_body_entered(body):
 	if body == player_object:
+		body.show_lists()
 		show_lists()
 
 func _on_TraitUiOpener_body_exited(body):
 	if body == player_object:
+		body.hide_lists()
 		hide_lists()
 
 func _on_TraitsList_item_activated(index):

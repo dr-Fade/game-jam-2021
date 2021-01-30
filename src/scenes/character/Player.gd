@@ -29,12 +29,10 @@ func _physics_process(delta) -> void:
 func _on_TraitUiOpener_body_entered(body):
 	if body is AbstractObject and body != self:
 		peer_object = body as AbstractObject
-		$TraitsList.visible = true
 
 func _on_TraitUiOpener_body_exited(body):
 	if body is AbstractObject and body != self:
 		peer_object = null
-		$TraitsList.visible = false
 
 func _on_TraitsList_item_activated(index):
 	var trait = traits[index - innate_traits.size()]
