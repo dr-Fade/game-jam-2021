@@ -10,6 +10,7 @@ var traits := []
 var effect = null
 
 onready var player_object = get_owner().find_node("Player")
+onready var quest_checks = player_object.find_node("Quest")
 
 func fill_ui_lists():
 	$TraitsList.clear()
@@ -28,7 +29,7 @@ func fill_ui_lists():
 func add_trait(new_trait):
 	var new_innate_traits = Traits.fit_trait(new_trait, innate_traits)
 	var new_traits = Traits.fit_trait(new_trait, traits)
-	if traits_not_changed(new_innate_traits, new_traits) and trait_slots_available():
+	if traits_not_changed(new_innate_traits, new_traits):
 		new_traits.append(new_trait)
 	innate_traits = new_innate_traits
 	traits = new_traits
@@ -52,11 +53,12 @@ func _check_win_conditions():
 func set_effect(new_effect):
 	effect = new_effect
 
+func complete_quest(quest_check):
+	make_all_traits_innate()
+	quest_check.visible = true
+
 func traits_not_changed(new_innate_traits, new_traits):
 	return new_innate_traits.size() == innate_traits.size() and new_traits.size() == traits.size()
-
-func trait_slots_available():
-	return traits.size() + innate_traits.size() < MAX_TRAITS
 
 func remove_trait(trait):
 	var index = traits.find(trait)
@@ -97,10 +99,12 @@ func hide_lists():
 
 func _on_TraitUiOpener_body_entered(body):
 	if body == player_object:
+		body.show_lists()
 		show_lists()
 
 func _on_TraitUiOpener_body_exited(body):
 	if body == player_object:
+		body.hide_lists()
 		hide_lists()
 
 func _on_TraitsList_item_activated(index):

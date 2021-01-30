@@ -65,6 +65,11 @@ _global_script_classes=[ {
 "path": "res://scenes/objects/Mask.gd"
 }, {
 "base": "AbstractObject",
+"class": "Monkey",
+"language": "GDScript",
+"path": "res://scenes/objects/Monkey.gd"
+}, {
+"base": "AbstractObject",
 "class": "Native",
 "language": "GDScript",
 "path": "res://scenes/objects/Native.gd"
@@ -85,6 +90,11 @@ _global_script_classes=[ {
 "path": "res://scenes/objects/Segul.gd"
 }, {
 "base": "AbstractObject",
+"class": "Spider",
+"language": "GDScript",
+"path": "res://scenes/objects/Spider.gd"
+}, {
+"base": "AbstractObject",
 "class": "Spikes",
 "language": "GDScript",
 "path": "res://scenes/objects/Spikes.gd"
@@ -98,11 +108,6 @@ _global_script_classes=[ {
 "class": "Web",
 "language": "GDScript",
 "path": "res://scenes/objects/Web.gd"
-}, {
-"base": "AbstractObject",
-"class": "bonfire2",
-"language": "GDScript",
-"path": "res://scenes/objects/Bonfire2.gd"
 } ]
 _global_script_class_icons={
 "AbstractObject": "",
@@ -116,14 +121,15 @@ _global_script_class_icons={
 "Fly": "",
 "Gold": "",
 "Mask": "",
+"Monkey": "",
 "Native": "",
 "ObjectTransformator": "",
 "Quest": "",
 "Segul": "",
+"Spider": "",
 "Spikes": "",
 "Towel": "",
-"Web": "",
-"bonfire2": ""
+"Web": ""
 }
 
 [application]

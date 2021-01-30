@@ -27,9 +27,7 @@ enum Trait {
 	NERVOUS,
 	LIGHT,
 	MAGICAL,
-
 	COTTON,
-	
 	NASTY,
 	GRAY
 	BRIGHT,
@@ -60,7 +58,9 @@ enum Effect {
 	EXTINGUISHED
 	SHINING,
 	DARKENED,
-	WOUNDING
+	WOUNDING,
+	UNCOOPEREATING,
+	WAITING
 }
 
 # list of traits that cannot be in the same object and must annihilate
