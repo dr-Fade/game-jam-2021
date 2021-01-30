@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/character/Player.gd" type="Script" id=1]
+[ext_resource path="res://scenes/misc/Quest.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 14.1644
@@ -25,6 +26,9 @@ shape = SubResource( 1 )
 position = Vector2( 0.116547, -52.7654 )
 scale = Vector2( 0.241086, 0.230355 )
 texture = SubResource( 2 )
+
+[node name="Quest" parent="." instance=ExtResource( 2 )]
+position = Vector2( -498.482, -342.4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0.116547, -52.1702 )
