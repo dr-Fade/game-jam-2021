@@ -10,4 +10,4 @@ func _check_win_conditions():
 	if (traits + innate_traits).has(Traits.Trait.COTTON) && (traits + innate_traits).has(Traits.Trait.STICKY):
 		get_parent().find_node("Native").set_effect(Traits.Effect.HEALING)
 		return Traits.Effect.HEALING
-	return Traits.Effect.WOODING
+	return Traits.Effect.WOUNDING

@@ -60,6 +60,7 @@ enum Effect {
 	EXTINGUISHED
 	SHINING,
 	DARKENED,
+	WOUNDING
 }
 
 # list of traits that cannot be in the same object and must annihilate
