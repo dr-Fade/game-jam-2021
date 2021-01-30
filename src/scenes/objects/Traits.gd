@@ -45,16 +45,13 @@ enum Effect {
 	KILLING,
 	BROKEN,
 	ERUPTING,
-<<<<<<< HEAD
 	WOODING,
 	HEALING,
 	BLOOMING,
 	ROATING,
-=======
 	SLEEPING,
 	SOOTHING,
 	SATURATED
->>>>>>> a22739e5c3cc133030ae9d3765d8a2b520808aba
 }
 
 # list of traits that cannot be in the same object and must annihilate
