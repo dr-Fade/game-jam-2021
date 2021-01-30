@@ -34,8 +34,7 @@ enum Trait {
 	GRAY
 	BRIGHT,
 	DIM,
-	SALTY
-}
+	SALTY}
 
 # when traits are combined, they can create an effect
 enum Effect {
@@ -45,13 +44,18 @@ enum Effect {
 	KILLING,
 	BROKEN,
 	ERUPTING,
+	FLOATING,
+	LAYING,
+	HORRIFIYNG,
+	AMUSING,
+	CALMED,
+	SLEEPING,
+	SOOTHING,
+	SATURATED,
 	WOODING,
 	HEALING,
 	BLOOMING,
 	ROATING,
-	SLEEPING,
-	SOOTHING,
-	SATURATED,
 	SHINING,
 	DARKENED,
 }

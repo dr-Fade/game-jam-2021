@@ -365,6 +365,9 @@ INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 12 )
 
+[node name="CollisionShape2D" parent="ObjectPool/Native/TraitUiOpener" index="0"]
+disabled = true
+
 [node name="Web" parent="ObjectPool" instance=ExtResource( 3 )]
 position = Vector2( 1149.91, 403.916 )
 script = ExtResource( 19 )
