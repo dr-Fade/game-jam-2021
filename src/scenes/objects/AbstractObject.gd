@@ -23,6 +23,7 @@ func fill_ui_lists():
 		$TraitsList.add_item(Traits.Trait.keys()[t].capitalize())
 	if effect != null and self != player_object:
 		$EffectsList.add_item(Traits.Effect.keys()[effect].capitalize())
+		$EffectsList.visible = true
 
 func add_trait(new_trait):
 	var new_innate_traits = Traits.fit_trait(new_trait, innate_traits)
@@ -34,11 +35,16 @@ func add_trait(new_trait):
 	effect = check_win_conditions()
 	fill_ui_lists()
 
+func get_traits():
+	return innate_traits + traits
+
+func make_all_traits_innate():
+	innate_traits += traits
+	traits.clear()
+	fill_ui_lists()
+
 func check_win_conditions():
-	if traits.has(Traits.Trait.EMPTY):
-		return Traits.Effect.UNDEF
-	else:
-		return _check_win_conditions()
+	return _check_win_conditions()
 
 func _check_win_conditions():
 	return effect
@@ -60,12 +66,12 @@ func remove_trait(trait):
 
 func try_swap_trait(src, dst, trait):
 	if src == null \
-	or dst == null \
-	or !Traits.is_new_trait_compatible(trait, dst.traits) \
-	or !dst.trait_slots_available():
+	or dst == null:
 		return
 	var target_swap_trait = dst.get_target_swap_trait()
-	if target_swap_trait != null:
+	if target_swap_trait != null \
+	and (Traits.is_new_trait_compatible(trait, dst.get_traits()) \
+	or Traits.is_new_trait_compatible(target_swap_trait, src.get_traits())):
 		dst.remove_trait(target_swap_trait)
 		src.remove_trait(trait)
 		dst.add_trait(trait)
@@ -87,7 +93,7 @@ func show_lists():
 func hide_lists():
 	$TraitsList.visible = false
 	if $EffectsList != null:
-		$EffectsList.visible = false
+		$EffectsList.visible = effect != null
 
 func _on_TraitUiOpener_body_entered(body):
 	if body == player_object:

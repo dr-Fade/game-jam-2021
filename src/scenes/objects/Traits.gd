@@ -14,7 +14,9 @@ enum Trait {
 	POISONOUS,
 	HEALING,
 	HOT,
+	COLD,
 	WET,
+	DRY,
 	SHARP,
 	DULL,
 	STICKY,
@@ -24,8 +26,15 @@ enum Trait {
 	HEAVY,
 	NERVOUS,
 	LIGHT,
-	MAGICAL
-}
+	MAGICAL,
+
+	COTTON,
+	
+	NASTY,
+	GRAY
+	BRIGHT,
+	DIM,
+	SALTY}
 
 # when traits are combined, they can create an effect
 enum Effect {
@@ -33,7 +42,24 @@ enum Effect {
 	BURNING,
 	SINKING,
 	KILLING,
-	BROKEN
+	BROKEN,
+	ERUPTING,
+	FLOATING,
+	LAYING,
+	HORRIFIYNG,
+	AMUSING,
+	CALMED,
+	SLEEPING,
+	SOOTHING,
+	DRIED,
+	SATURATED,
+	HEALING,
+	BLOOMING,
+	ROATING,
+	DEACTIVATED,
+	EXTINGUISHED
+	SHINING,
+	DARKENED,
 }
 
 # list of traits that cannot be in the same object and must annihilate
@@ -99,7 +125,7 @@ func synegrize_traits(t1, t2):
 
 func is_new_trait_compatible(new_trait, traits) -> bool:
 	for t in traits:
-		if traits_incompatible(new_trait, t) or new_trait == t and t != Trait.EMPTY:
+		if traits_incompatible(new_trait, t) or (new_trait == t and t != Trait.EMPTY):
 			return false
 	return true
 
