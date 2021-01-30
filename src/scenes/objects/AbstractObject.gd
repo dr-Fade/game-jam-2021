@@ -34,6 +34,9 @@ func add_trait(new_trait):
 	effect = check_win_conditions()
 	fill_ui_lists()
 
+func get_traits():
+	return innate_traits + traits
+
 func check_win_conditions():
 	if traits.has(Traits.Trait.EMPTY):
 		return Traits.Effect.UNDEF
@@ -60,12 +63,12 @@ func remove_trait(trait):
 
 func try_swap_trait(src, dst, trait):
 	if src == null \
-	or dst == null \
-	or !Traits.is_new_trait_compatible(trait, dst.traits) \
-	or !dst.trait_slots_available():
+	or dst == null:
 		return
 	var target_swap_trait = dst.get_target_swap_trait()
-	if target_swap_trait != null:
+	if target_swap_trait != null \
+	and (Traits.is_new_trait_compatible(trait, dst.get_traits()) \
+	or Traits.is_new_trait_compatible(target_swap_trait, src.get_traits())):
 		dst.remove_trait(target_swap_trait)
 		src.remove_trait(trait)
 		dst.add_trait(trait)
