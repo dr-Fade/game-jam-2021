@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/character/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/objects/Object.tscn" type="PackedScene" id=2]
@@ -244,13 +244,6 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 } ]
 1/z_index = 0
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 13.9634
-height = 58.0713
-
-[sub_resource type="CircleShape2D" id=2]
-radius = 127.226
-
 [node name="LevelScene" type="Node2D"]
 script = ExtResource( 9 )
 
@@ -287,50 +280,17 @@ INNATE_TRAIT_BG_COLOR = Color( 0.788235, 0.188235, 0.188235, 1 )
 [node name="TraitsList" parent="ObjectPool/Player" index="3"]
 items = [ "", null, false, "", null, false, "", null, false ]
 
-[node name="Bandage" type="KinematicBody2D" parent="ObjectPool"]
-position = Vector2( 88.8943, 388.913 )
+[node name="Bandage" parent="." instance=ExtResource( 2 )]
+position = Vector2( 218.806, 472.62 )
 script = ExtResource( 5 )
+INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
-[node name="ObjectCollision" type="CollisionShape2D" parent="ObjectPool/Bandage"]
-rotation = 1.57079
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="ObjectPool/Bandage"]
+[node name="Sprite" parent="Bandage" index="1"]
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
-
-[node name="TraitsList" type="ItemList" parent="ObjectPool/Bandage"]
-visible = false
-margin_left = 0.263519
-margin_right = 75.2635
-auto_height = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="EffectsList" type="ItemList" parent="ObjectPool/Bandage"]
-visible = false
-margin_left = 74.7687
-margin_top = 0.442703
-margin_right = 149.769
-margin_bottom = 9.4427
-auto_height = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TraitUiOpener" type="Area2D" parent="ObjectPool/Bandage"]
-modulate = Color( 0.898039, 0, 1, 1 )
-position = Vector2( 25, 25 )
-monitorable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectPool/Bandage/TraitUiOpener"]
-position = Vector2( -25, -25 )
-shape = SubResource( 2 )
-[connection signal="item_activated" from="ObjectPool/Bandage/TraitsList" to="ObjectPool/Bandage" method="_on_TraitsList_item_activated"]
-[connection signal="body_entered" from="ObjectPool/Bandage/TraitUiOpener" to="ObjectPool/Bandage" method="_on_TraitUiOpener_body_entered"]
-[connection signal="body_exited" from="ObjectPool/Bandage/TraitUiOpener" to="ObjectPool/Bandage" method="_on_TraitUiOpener_body_exited"]
 
 [editable path="ObjectPool/Spikes"]
 
 [editable path="ObjectPool/Player"]
+
+[editable path="Bandage"]
