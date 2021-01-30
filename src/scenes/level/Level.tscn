@@ -519,6 +519,9 @@ tile_data = PoolIntArray( -589832, 0, 0, -655360, 0, 0, -655344, 0, 0, -655336, 
 [node name="ObjectPool" type="YSort" parent="."]
 position = Vector2( -47.876, 35.0372 )
 
+[node name="Player" parent="ObjectPool" instance=ExtResource( 1 )]
+position = Vector2( -771.403, 56.4199 )
+
 [node name="Segul" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -192.229, 185.69 )
 script = ExtResource( 32 )
@@ -778,19 +781,6 @@ margin_left = -56.0
 margin_top = -102.0
 margin_right = 63.0
 margin_bottom = -88.0
-
-[node name="Player" parent="ObjectPool" instance=ExtResource( 1 )]
-position = Vector2( -1104.79, 249.477 )
-MAX_TRAITS = 3
-
-[node name="Quest" parent="ObjectPool/Player" index="2"]
-position = Vector2( -502.302, -347.84 )
-
-[node name="TraitsList" parent="ObjectPool/Player" index="4"]
-margin_left = 52.9081
-margin_top = -58.9841
-margin_right = 125.908
-margin_bottom = -8.98405
 
 [node name="Cave" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 1283.21, 1336.09 )
@@ -1083,6 +1073,8 @@ margin_bottom = 80.4427
 [node name="CollisionShape2D" parent="ObjectPool/Spider/TraitUiOpener" index="0"]
 shape = SubResource( 50 )
 
+[editable path="ObjectPool/Player"]
+
 [editable path="ObjectPool/Segul"]
 
 [editable path="ObjectPool/Crate"]
@@ -1100,8 +1092,6 @@ shape = SubResource( 50 )
 [editable path="ObjectPool/Bandage"]
 
 [editable path="ObjectPool/Bonfire"]
-
-[editable path="ObjectPool/Player"]
 
 [editable path="ObjectPool/Cave"]
 

@@ -108,11 +108,6 @@ _global_script_classes=[ {
 "class": "Web",
 "language": "GDScript",
 "path": "res://scenes/objects/Web.gd"
-}, {
-"base": "AbstractObject",
-"class": "bonfire2",
-"language": "GDScript",
-"path": "res://scenes/objects/Bonfire2.gd"
 } ]
 _global_script_class_icons={
 "AbstractObject": "",
@@ -134,8 +129,7 @@ _global_script_class_icons={
 "Spider": "",
 "Spikes": "",
 "Towel": "",
-"Web": "",
-"bonfire2": ""
+"Web": ""
 }
 
 [application]
