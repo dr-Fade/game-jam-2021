@@ -4,9 +4,10 @@ var obj : AbstractObject
 var peer_object: AbstractObject = null
 
 func _ready():
-	traits.append(Traits.Trait.CALM)
-	traits.append(Traits.Trait.METALLIC)
-	traits.append(Traits.Trait.HOT)
+	print_debug(ObjectTransformator.hello())
+	traits.append(Traits.Trait.EMPTY)
+	traits.append(Traits.Trait.EMPTY)
+	traits.append(Traits.Trait.EMPTY)
 	fill_ui_lists()
 
 func _physics_process(delta) -> void:
@@ -38,4 +39,4 @@ func _on_TraitUiOpener_body_exited(body):
 
 func _on_TraitsList_item_activated(index):
 	var trait = traits[index - innate_traits.size()]
-	try_pass_trait(self, peer_object, trait)
+	try_swap_trait(self, peer_object, trait)

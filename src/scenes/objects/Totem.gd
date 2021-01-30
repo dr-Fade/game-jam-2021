@@ -1,4 +1,4 @@
 extends AbstractObject
 
 func _ready():
-	add_trait(Traits.Trait.WOODEN)
+	add_trait(Traits.Trait.MAGICAL)

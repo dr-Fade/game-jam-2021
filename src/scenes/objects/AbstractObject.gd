@@ -2,15 +2,14 @@ extends Actor
 class_name AbstractObject
 
 export var MAX_TRAITS = 2
-export var MAX_INNATE_TRAITS = 2
 export var INNATE_TRAIT_BG_COLOR = Color(1, 0, 0, 1)
 
 var innate_traits := []
 var traits := []
 
-var effects := []
+var effect = null
 
-onready var player_object = get_owner().get_node("Player")
+onready var player_object = get_owner().find_node("Player")
 
 func fill_ui_lists():
 	$TraitsList.clear()
@@ -22,8 +21,8 @@ func fill_ui_lists():
 		$TraitsList.set_item_custom_bg_color(last, INNATE_TRAIT_BG_COLOR)
 	for t in traits:
 		$TraitsList.add_item(Traits.Trait.keys()[t].capitalize())
-	for e in effects:
-		$EffectsList.add_item(Traits.Effect.keys()[e].capitalize())
+	if effect != null and self != player_object:
+		$EffectsList.add_item(Traits.Effect.keys()[effect].capitalize())
 
 func add_trait(new_trait):
 	var new_innate_traits = Traits.fit_trait(new_trait, innate_traits)
@@ -32,40 +31,74 @@ func add_trait(new_trait):
 		new_traits.append(new_trait)
 	innate_traits = new_innate_traits
 	traits = new_traits
-	effects = Traits.get_effects(traits + innate_traits)
+	effect = check_win_conditions()
 	fill_ui_lists()
+
+func check_win_conditions():
+	if traits.has(Traits.Trait.EMPTY):
+		return Traits.Effect.UNDEF
+	else:
+		return _check_win_conditions()
+
+func _check_win_conditions():
+	return effect
+
+func set_effect(new_effect):
+	effect = new_effect
 
 func traits_not_changed(new_innate_traits, new_traits):
 	return new_innate_traits.size() == innate_traits.size() and new_traits.size() == traits.size()
 
 func trait_slots_available():
-	return traits.size() < MAX_TRAITS
+	return traits.size() + innate_traits.size() < MAX_TRAITS
 
 func remove_trait(trait):
 	var index = traits.find(trait)
 	traits.remove(index)
+	effect = _check_win_conditions()
+	fill_ui_lists()
 
-func try_pass_trait(src, dst, trait):
+func try_swap_trait(src, dst, trait):
 	if src == null \
 	or dst == null \
 	or !Traits.is_new_trait_compatible(trait, dst.traits) \
 	or !dst.trait_slots_available():
 		return
-	dst.add_trait(trait)
-	dst.fill_ui_lists()
-	src.remove_trait(trait)
-	src.fill_ui_lists()
+	var target_swap_trait = dst.get_target_swap_trait()
+	if target_swap_trait != null:
+		dst.remove_trait(target_swap_trait)
+		src.remove_trait(trait)
+		dst.add_trait(trait)
+		src.add_trait(target_swap_trait)
+		dst.show_lists()
+		src.show_lists()
+
+func get_target_swap_trait():
+	if $TraitsList.is_anything_selected():
+		if $TraitsList.get_selected_items()[0] >= innate_traits.size():
+			return (innate_traits + traits)[$TraitsList.get_selected_items()[0]]
+	return null
+
+func show_lists():
+	$TraitsList.visible = true
+	if $EffectsList != null:
+		$EffectsList.visible = effect != null
+
+func hide_lists():
+	$TraitsList.visible = false
+	if $EffectsList != null:
+		$EffectsList.visible = false
 
 func _on_TraitUiOpener_body_entered(body):
 	if body == player_object:
-		$TraitsList.visible = true
-		$EffectsList.visible = true
+		show_lists()
 
 func _on_TraitUiOpener_body_exited(body):
 	if body == player_object:
-		$TraitsList.visible = false
-		$EffectsList.visible = false
+		hide_lists()
 
 func _on_TraitsList_item_activated(index):
-	var trait = innate_traits[index]
-	try_pass_trait(self, player_object, trait)
+	if index < innate_traits.size():
+		return
+	var trait = traits[index - innate_traits.size()]
+	try_swap_trait(self, player_object, trait)

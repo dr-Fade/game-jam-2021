@@ -2,8 +2,9 @@
 
 [ext_resource path="res://scenes/objects/AbstractObject.gd" type="Script" id=1]
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 27.7261, 26.9996 )
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 13.9634
+height = 58.0713
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 127.226
@@ -13,6 +14,7 @@ script = ExtResource( 1 )
 INNATE_TRAIT_BG_COLOR = Color( 0.843137, 0.203922, 0.203922, 1 )
 
 [node name="ObjectCollision" type="CollisionShape2D" parent="."]
+rotation = 1.57079
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]

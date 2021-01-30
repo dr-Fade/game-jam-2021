@@ -2,6 +2,8 @@ extends Node
 
 # a set of adjectives that describe effects that objects have on each other
 enum Trait {
+	# crutch
+	EMPTY
 	# material
 	WOODEN,
 	GLASSY,
@@ -13,7 +15,6 @@ enum Trait {
 	HEALING,
 	HOT,
 	WET,
-	DRY,
 	SHARP,
 	DULL,
 	STICKY,
@@ -22,35 +23,38 @@ enum Trait {
 	ANGRY,
 	HEAVY,
 	NERVOUS,
-	LIGHT
+	LIGHT,
+	MAGICAL
 }
 
 # when traits are combined, they can create an effect
 enum Effect {
+	UNDEF,
 	BURNING,
 	SINKING,
+	KILLING,
+	BROKEN
 }
 
 # list of traits that cannot be in the same object and must annihilate
 export var annihilation_map = [
-	Vector2(Trait.HEALING, Trait.POISONOUS),
-	Vector2(Trait.WET, Trait.STICKY),
-	Vector2(Trait.SHARP, Trait.DULL),
-	Vector2(Trait.AGGRESSIVE, Trait.CALM),
-	Vector2(Trait.HEAVY, Trait.LIGHT),
+	#Vector2(Trait.HEALING, Trait.POISONOUS),
+	#Vector2(Trait.WET, Trait.STICKY),
+	#Vector2(Trait.AGGRESSIVE, Trait.CALM),
+	#Vector2(Trait.HEAVY, Trait.LIGHT),
 ]
 
 # list of traits that transform into another trait
 export var synergy_map = {
-	Vector2(Trait.HOT, Trait.WET): Trait.DRY,
+	#Vector2(Trait.SHARP, Trait.DULL): Trait.DULL,
 }
 
 # list of traits that cannot be in the same object and must NOT annihilate
 export var incompatibility_map = []
 
 export var effects_map = {
-	Vector2(Trait.WOODEN, Trait.HOT): Effect.BURNING,
-	Vector2(Trait.METALLIC, Trait.HEAVY): Effect.SINKING,
+	#Vector2(Trait.WOODEN, Trait.HOT): Effect.BURNING,
+	#Trait.HEAVY: Effect.SINKING,
 }
 
 func fit_trait(new_trait, traits):
@@ -80,10 +84,10 @@ func annihilate_traits(new_trait, old_traits) -> Array:
 	return new_traits
 
 func traits_incompatible(t1, t2) -> bool:
-	return incompatibility_map.has(Vector2(t1, t2)) || Traits.incompatibility_map.has(Vector2(t2, t1))
+	return incompatibility_map.has(Vector2(t1, t2)) || incompatibility_map.has(Vector2(t2, t1))
 
 func traits_annihilate(t1, t2) -> bool:
-	return annihilation_map.has(Vector2(t1, t2)) || Traits.annihilation_map.has(Vector2(t2, t1))
+	return annihilation_map.has(Vector2(t1, t2)) || annihilation_map.has(Vector2(t2, t1))
 
 func synegrize_traits(t1, t2):
 	if synergy_map.has(Vector2(t1, t2)):
@@ -95,7 +99,7 @@ func synegrize_traits(t1, t2):
 
 func is_new_trait_compatible(new_trait, traits) -> bool:
 	for t in traits:
-		if traits_incompatible(new_trait, t) or new_trait == t:
+		if traits_incompatible(new_trait, t) or new_trait == t and t != Trait.EMPTY:
 			return false
 	return true
 
