@@ -14,7 +14,9 @@ enum Trait {
 	POISONOUS,
 	HEALING,
 	HOT,
+	COLD,
 	WET,
+	DRY,
 	SHARP,
 	DULL,
 	STICKY,
@@ -25,11 +27,14 @@ enum Trait {
 	NERVOUS,
 	LIGHT,
 	MAGICAL,
-	
+
 	COTTON,
 	
 	NASTY,
 	GRAY
+	BRIGHT,
+	DIM,
+	SALTY
 }
 
 # when traits are combined, they can create an effect
@@ -40,10 +45,16 @@ enum Effect {
 	KILLING,
 	BROKEN,
 	ERUPTING,
+<<<<<<< HEAD
 	WOODING,
 	HEALING,
 	BLOOMING,
 	ROATING,
+=======
+	SLEEPING,
+	SOOTHING,
+	SATURATED
+>>>>>>> a22739e5c3cc133030ae9d3765d8a2b520808aba
 }
 
 # list of traits that cannot be in the same object and must annihilate

@@ -4,8 +4,7 @@ var obj : AbstractObject
 var peer_object: AbstractObject = null
 
 func _ready():
-	print_debug(ObjectTransformator.hello())
-	traits.append(Traits.Trait.EMPTY)
+	traits.append(Traits.Trait.MAGICAL)
 	traits.append(Traits.Trait.EMPTY)
 	traits.append(Traits.Trait.EMPTY)
 	fill_ui_lists()
