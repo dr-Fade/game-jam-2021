@@ -40,9 +40,24 @@ _global_script_classes=[ {
 "path": "res://scenes/objects/Feather.gd"
 }, {
 "base": "AbstractObject",
+"class": "Flower",
+"language": "GDScript",
+"path": "res://scenes/objects/Flower.gd"
+}, {
+"base": "AbstractObject",
+"class": "Fly",
+"language": "GDScript",
+"path": "res://scenes/objects/Fly.gd"
+}, {
+"base": "AbstractObject",
 "class": "Mask",
 "language": "GDScript",
 "path": "res://scenes/objects/Mask.gd"
+}, {
+"base": "AbstractObject",
+"class": "Native",
+"language": "GDScript",
+"path": "res://scenes/objects/Native.gd"
 }, {
 "base": "Node",
 "class": "ObjectTransformator",
@@ -66,7 +81,10 @@ _global_script_class_icons={
 "Boat": "",
 "Crate": "",
 "Feather": "",
+"Flower": "",
+"Fly": "",
 "Mask": "",
+"Native": "",
 "ObjectTransformator": "",
 "Segul": "",
 "Spikes": ""
@@ -75,7 +93,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Random-game"
-run/main_scene="res://scenes/level/Level.tscn"
+run/main_scene="res://scenes/level/BandageQuest.tscn"
 boot_splash/image="res://icon.png"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"
