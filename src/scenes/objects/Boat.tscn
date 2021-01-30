@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/objects/Boat.gd" type="Script" id=1]
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 9.66711
 height = 306.247
 
@@ -10,7 +10,7 @@ height = 306.247
 flags = 4
 load_path = "res://.import/Boat.png-55c73027b3d081fa4bc0c20b0da4b685.stex"
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=3]
 radius = 165.763
 
 [node name="Boat" type="KinematicBody2D"]
@@ -18,7 +18,7 @@ script = ExtResource( 1 )
 
 [node name="ObjectCollision" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 10.0113, -77.6606 )
@@ -43,4 +43,4 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TraitUiOpener"]
 position = Vector2( -25, -22.8787 )
 rotation = 1.5708
-shape = SubResource( 4 )
+shape = SubResource( 3 )
