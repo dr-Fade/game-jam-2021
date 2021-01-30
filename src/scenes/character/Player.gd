@@ -6,6 +6,7 @@ var peer_object: AbstractObject = null
 func _ready():
 	traits.append(Traits.Trait.EMPTY)
 	traits.append(Traits.Trait.EMPTY)
+	traits.append(Traits.Trait.EMPTY)
 	fill_ui_lists()
 
 func _physics_process(delta) -> void:
