@@ -33,7 +33,8 @@ enum Effect {
 	BURNING,
 	SINKING,
 	KILLING,
-	BROKEN
+	BROKEN,
+	ERUPTING
 }
 
 # list of traits that cannot be in the same object and must annihilate
@@ -99,7 +100,7 @@ func synegrize_traits(t1, t2):
 
 func is_new_trait_compatible(new_trait, traits) -> bool:
 	for t in traits:
-		if traits_incompatible(new_trait, t) or new_trait == t and t != Trait.EMPTY:
+		if traits_incompatible(new_trait, t) or (new_trait == t and t != Trait.EMPTY):
 			return false
 	return true
 
