@@ -23,6 +23,7 @@ func fill_ui_lists():
 		$TraitsList.add_item(Traits.Trait.keys()[t].capitalize())
 	if effect != null and self != player_object:
 		$EffectsList.add_item(Traits.Effect.keys()[effect].capitalize())
+		$EffectsList.visible = true
 
 func add_trait(new_trait):
 	var new_innate_traits = Traits.fit_trait(new_trait, innate_traits)
@@ -87,7 +88,7 @@ func show_lists():
 func hide_lists():
 	$TraitsList.visible = false
 	if $EffectsList != null:
-		$EffectsList.visible = false
+		$EffectsList.visible = effect != null
 
 func _on_TraitUiOpener_body_entered(body):
 	if body == player_object:
