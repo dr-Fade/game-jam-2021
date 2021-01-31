@@ -36,6 +36,18 @@ func add_trait(new_trait):
 	effect = check_win_conditions()
 	fill_ui_lists()
 
+
+func add_trait_at(new_trait, index):
+	traits[index] = new_trait
+	effect = check_win_conditions()
+	fill_ui_lists()
+
+func remove_trait(trait):
+	var index = traits.find(trait)
+	traits.remove(index)
+	effect = _check_win_conditions()
+	fill_ui_lists()
+
 func get_traits():
 	return innate_traits + traits
 
@@ -77,31 +89,37 @@ func despawn():
 	$ObjectCollision.disabled = true
 	$TraitUiOpener/CollisionShape2D.disabled = true
 
-func remove_trait(trait):
-	var index = traits.find(trait)
-	traits.remove(index)
-	effect = _check_win_conditions()
-	fill_ui_lists()
-
-func try_swap_trait(src, dst, trait):
-	if src == null \
-	or dst == null:
+func try_swap_trait(src, index):
+	if src == null:
 		return
-	var target_swap_trait = dst.get_target_swap_trait()
-	if target_swap_trait != null \
-	and (Traits.is_new_trait_compatible(trait, dst.get_traits()) \
-	or Traits.is_new_trait_compatible(target_swap_trait, src.get_traits())):
-		dst.remove_trait(target_swap_trait)
-		src.remove_trait(trait)
-		dst.add_trait(trait)
-		src.add_trait(target_swap_trait)
-		dst.show_lists()
-		src.show_lists()
+	var dst
+	var src_swap_trait = src.traits[index]
+	var dst_swap_trait
+	var src_swap_index = index
+	var dst_swap_index
+	if src == player_object:
+		dst = player_object.peer_object
+	else:
+		dst = player_object
+	dst_swap_index = dst.get_swap_index()
+	if dst_swap_index == null:
+		return
+	dst_swap_trait = dst.get_swap_trait()
+	dst.add_trait_at(src_swap_trait, dst_swap_index)
+	src.add_trait_at(dst_swap_trait, src_swap_index)
+	dst.show_lists()
+	src.show_lists()
 
-func get_target_swap_trait():
+func get_swap_trait():
 	if $TraitsList.is_anything_selected():
 		if $TraitsList.get_selected_items()[0] >= innate_traits.size():
-			return (innate_traits + traits)[$TraitsList.get_selected_items()[0]]
+			return traits[$TraitsList.get_selected_items()[0] - innate_traits.size()]
+	return null
+
+func get_swap_index():
+	if $TraitsList.is_anything_selected():
+		if $TraitsList.get_selected_items()[0] >= innate_traits.size():
+			return $TraitsList.get_selected_items()[0] - innate_traits.size()
 	return null
 
 func show_lists():
@@ -115,18 +133,21 @@ func hide_lists():
 		$EffectsList.visible = effect != null
 
 func _on_TraitUiOpener_body_entered(body):
-	if body == player_object:
+	if body == player_object and self != player_object:
 		body.show_lists()
-		body.peer_object = self
 		show_lists()
 
 func _on_TraitUiOpener_body_exited(body):
-	if body == player_object:
+	if body == player_object and self != player_object:
 		body.hide_lists()
 		hide_lists()
 
 func _on_TraitsList_item_activated(index):
 	if index < innate_traits.size():
 		return
-	var trait = traits[index - innate_traits.size()]
-	try_swap_trait(self, player_object, trait)
+	try_swap_trait(self, index - innate_traits.size())
+
+
+func _on_TraitsList_item_selected(index):
+	if self != player_object:
+		player_object.peer_object = self

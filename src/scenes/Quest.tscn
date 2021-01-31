@@ -72,3 +72,4 @@ texture = ExtResource( 3 )
 position = Vector2( 350, 0 )
 stream = ExtResource( 4 )
 volume_db = -10.0
+max_distance = 99999.0

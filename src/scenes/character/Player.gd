@@ -1,7 +1,7 @@
 extends AbstractObject
+class_name Player
 
-var obj : AbstractObject
-var peer_object: AbstractObject = null
+var peer_object = null
 
 func _ready():
 	traits.append(Traits.Trait.EMPTY)
@@ -25,15 +25,3 @@ func _physics_process(delta) -> void:
 		move_and_collide(-velocityY)
 	if Input.is_key_pressed(KEY_S):
 		move_and_collide(velocityY)
-
-func _on_TraitUiOpener_body_entered(body):
-	if body is AbstractObject and body != self:
-		peer_object = body as AbstractObject
-
-func _on_TraitUiOpener_body_exited(body):
-	if body is AbstractObject and body != self:
-		peer_object = null
-
-func _on_TraitsList_item_activated(index):
-	var trait = traits[index - innate_traits.size()]
-	try_swap_trait(self, peer_object, trait)

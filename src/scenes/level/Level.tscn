@@ -387,7 +387,7 @@ radius = 9.9722
 height = 46.954
 
 [sub_resource type="CircleShape2D" id=37]
-radius = 105.461
+radius = 152.0
 
 [sub_resource type="CapsuleShape2D" id=38]
 radius = 19.7172
@@ -975,6 +975,8 @@ position = Vector2( 1040.06, 2434.52 )
 [node name="Seagul" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -31.9642, 1830.52 )
 script = ExtResource( 32 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Seagul/TraitUiOpener" index="0"]
@@ -1001,6 +1003,8 @@ margin_bottom = -104.556
 [node name="Crate" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 160.466, 2538.52 )
 script = ExtResource( 33 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Crate/TraitUiOpener" index="0"]
@@ -1032,6 +1036,8 @@ shape = SubResource( 17 )
 [node name="Gold" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 1932.75, 1883.64 )
 script = ExtResource( 34 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Gold/TraitUiOpener" index="0"]
@@ -1061,6 +1067,8 @@ shape = SubResource( 19 )
 [node name="Flower" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -165.28, 584.469 )
 script = ExtResource( 23 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Flower/TraitUiOpener" index="0"]
@@ -1073,16 +1081,17 @@ scale = Vector2( 0.34762, 0.363938 )
 texture = ExtResource( 24 )
 
 [node name="TraitsList" parent="ObjectPool/Flower" index="2"]
-margin_left = 25.0
-margin_top = -21.9504
-margin_right = 110.0
-margin_bottom = -11.9504
+visible = true
+margin_left = 65.6425
+margin_top = 1.0496
+margin_right = 150.642
+margin_bottom = 11.0496
 
 [node name="EffectsList" parent="ObjectPool/Flower" index="3"]
 visible = true
-margin_left = -67.8436
+margin_left = -59.8436
 margin_top = 14.1741
-margin_right = 16.1564
+margin_right = 24.1564
 margin_bottom = 24.1741
 
 [node name="ObjectCollision" parent="ObjectPool/Flower" index="4"]
@@ -1091,6 +1100,8 @@ shape = SubResource( 21 )
 [node name="Crystals" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 1247.88, 1341.45 )
 script = ExtResource( 17 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Crystals/TraitUiOpener" index="0"]
@@ -1121,6 +1132,8 @@ disabled = true
 [node name="Volcano" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 876.43, 100.45 )
 script = ExtResource( 14 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Volcano/TraitUiOpener" index="0"]
@@ -1134,9 +1147,9 @@ texture = ExtResource( 13 )
 [node name="TraitsList" parent="ObjectPool/Volcano" index="2"]
 visible = true
 margin_left = 44.0
-margin_top = 42.0
+margin_top = 61.0
 margin_right = 207.0
-margin_bottom = 62.0
+margin_bottom = 81.0
 
 [node name="EffectsList" parent="ObjectPool/Volcano" index="3"]
 visible = true
@@ -1157,6 +1170,8 @@ max_distance = 750.0
 [node name="Boat" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 1059.34, 2921.78 )
 script = ExtResource( 12 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Boat/TraitUiOpener" index="0"]
@@ -1187,6 +1202,8 @@ shape = SubResource( 26 )
 [node name="Bandage" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -876.114, -309.481 )
 script = ExtResource( 8 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Bandage/TraitUiOpener" index="0"]
@@ -1218,6 +1235,8 @@ shape = SubResource( 28 )
 [node name="Bonfire" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 1648.47, 2626.52 )
 script = ExtResource( 5 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Bonfire/TraitUiOpener" index="0"]
@@ -1265,6 +1284,8 @@ texture = ExtResource( 47 )
 [node name="Cave" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 1283.21, 1336.09 )
 script = ExtResource( 16 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Cave/TraitUiOpener" index="0"]
@@ -1277,10 +1298,11 @@ scale = Vector2( 1.10547, 1.42743 )
 texture = ExtResource( 15 )
 
 [node name="TraitsList" parent="ObjectPool/Cave" index="2"]
-margin_left = -199.78
-margin_top = -99.1272
-margin_right = -91.78
-margin_bottom = -84.1272
+visible = true
+margin_left = -299.334
+margin_top = -75.1272
+margin_right = -191.334
+margin_bottom = -60.1272
 
 [node name="EffectsList" parent="ObjectPool/Cave" index="3"]
 visible = true
@@ -1301,6 +1323,8 @@ max_distance = 500.0
 [node name="Totem" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 1308.72, 520.919 )
 script = ExtResource( 20 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Totem/TraitUiOpener" index="0"]
@@ -1331,6 +1355,8 @@ shape = SubResource( 34 )
 [node name="Fly" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -235.378, 514.519 )
 script = ExtResource( 21 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="TraitUiOpener" parent="ObjectPool/Fly" index="0"]
@@ -1365,10 +1391,12 @@ shape = SubResource( 36 )
 [node name="Web" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -376.124, 452.963 )
 script = ExtResource( 26 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Web/TraitUiOpener" index="0"]
-position = Vector2( -97, -105 )
+position = Vector2( -89, -81.0002 )
 shape = SubResource( 37 )
 
 [node name="Sprite" parent="ObjectPool/Web" index="1"]
@@ -1395,6 +1423,8 @@ shape = SubResource( 38 )
 [node name="Towel" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 2507.39, 1636.76 )
 script = ExtResource( 28 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Towel/TraitUiOpener" index="0"]
@@ -1427,6 +1457,8 @@ shape = SubResource( 40 )
 visible = false
 position = Vector2( -16.0482, 1962.83 )
 script = ExtResource( 30 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Feather/TraitUiOpener" index="0"]
 position = Vector2( -15.6773, 15.7022 )
@@ -1457,11 +1489,17 @@ disabled = true
 [node name="Native" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -652.114, -282.471 )
 script = ExtResource( 38 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
+
+[node name="TraitUiOpener" parent="ObjectPool/Native" index="0"]
+visible = false
 
 [node name="CollisionShape2D" parent="ObjectPool/Native/TraitUiOpener" index="0"]
 position = Vector2( -25, -42.2189 )
 shape = SubResource( 43 )
+disabled = true
 
 [node name="Sprite" parent="ObjectPool/Native" index="1"]
 position = Vector2( 9.09375, -50.657 )
@@ -1489,6 +1527,8 @@ shape = SubResource( 44 )
 [node name="Monkey" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 2241.16, 1839.54 )
 script = ExtResource( 40 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Monkey/TraitUiOpener" index="0"]
@@ -1528,6 +1568,8 @@ max_distance = 500.0
 [node name="Mask" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -199.534, 1864.33 )
 script = ExtResource( 31 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="TraitUiOpener" parent="ObjectPool/Mask" index="0"]
@@ -1561,6 +1603,8 @@ shape = SubResource( 48 )
 [node name="Spider" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -367.016, 520.919 )
 script = ExtResource( 43 )
+deltaSpeedCoef = 150
+speed = Vector2( 300, 300 )
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Spider/TraitUiOpener" index="0"]
