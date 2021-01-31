@@ -147,7 +147,6 @@ func _on_TraitsList_item_activated(index):
 		return
 	try_swap_trait(self, index - innate_traits.size())
 
-
 func _on_TraitsList_item_selected(index):
 	if self != player_object:
 		player_object.peer_object = self

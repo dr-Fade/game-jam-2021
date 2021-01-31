@@ -1165,7 +1165,7 @@ shape = SubResource( 24 )
 stream = ExtResource( 50 )
 volume_db = -5.0
 autoplay = true
-max_distance = 750.0
+max_distance = 1000.0
 
 [node name="Boat" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( 1059.34, 2921.78 )
@@ -1561,9 +1561,9 @@ shape = SubResource( 46 )
 
 [node name="Scream" type="AudioStreamPlayer2D" parent="ObjectPool/Monkey"]
 stream = ExtResource( 48 )
-volume_db = -25.0
+volume_db = -20.0
 autoplay = true
-max_distance = 500.0
+max_distance = 750.0
 
 [node name="Mask" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -199.534, 1864.33 )
