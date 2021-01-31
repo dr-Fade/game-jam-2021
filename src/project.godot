@@ -84,7 +84,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/singletons/ObjectTrasformator.gd"
 }, {
-"base": "Node2D",
+"base": "CanvasLayer",
 "class": "Quest",
 "language": "GDScript",
 "path": "res://scenes/misc/Quest.gd"

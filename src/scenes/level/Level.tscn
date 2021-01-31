@@ -63,11 +63,6 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 1 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -122,11 +117,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 9 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -143,11 +133,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 3/tile_mode = 0
 3/occluder_offset = Vector2( 0, 0 )
 3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 10 )
-3/shape_one_way = false
-3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -164,11 +149,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 4/tile_mode = 0
 4/occluder_offset = Vector2( 0, 0 )
 4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 11 )
-4/shape_one_way = false
-4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -185,10 +165,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 5/tile_mode = 0
 5/occluder_offset = Vector2( 0, 0 )
 5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
 5/shapes = [  ]
 5/z_index = 0
 7/name = "ground_atlas.png 7"
@@ -199,11 +175,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 7/tile_mode = 0
 7/occluder_offset = Vector2( 0, 0 )
 7/navigation_offset = Vector2( 0, 0 )
-7/shape_offset = Vector2( 0, 0 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 12 )
-7/shape_one_way = false
-7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -220,11 +191,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 8/tile_mode = 0
 8/occluder_offset = Vector2( 0, 0 )
 8/navigation_offset = Vector2( 0, 0 )
-8/shape_offset = Vector2( 0, 0 )
-8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape = SubResource( 13 )
-8/shape_one_way = false
-8/shape_one_way_margin = 1.0
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -241,11 +207,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 9/tile_mode = 0
 9/occluder_offset = Vector2( 0, 0 )
 9/navigation_offset = Vector2( 0, 0 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape = SubResource( 14 )
-9/shape_one_way = false
-9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -262,11 +223,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 10/tile_mode = 0
 10/occluder_offset = Vector2( 0, 0 )
 10/navigation_offset = Vector2( 0, 0 )
-10/shape_offset = Vector2( 0, 0 )
-10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-10/shape = SubResource( 3 )
-10/shape_one_way = false
-10/shape_one_way_margin = 1.0
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -283,11 +239,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 11/tile_mode = 0
 11/occluder_offset = Vector2( 0, 0 )
 11/navigation_offset = Vector2( 0, 0 )
-11/shape_offset = Vector2( 0, 0 )
-11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-11/shape = SubResource( 4 )
-11/shape_one_way = false
-11/shape_one_way_margin = 1.0
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -304,11 +255,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 12/tile_mode = 0
 12/occluder_offset = Vector2( 0, 0 )
 12/navigation_offset = Vector2( 0, 0 )
-12/shape_offset = Vector2( 0, 0 )
-12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-12/shape = SubResource( 5 )
-12/shape_one_way = false
-12/shape_one_way_margin = 1.0
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -325,11 +271,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 13/tile_mode = 0
 13/occluder_offset = Vector2( 0, 0 )
 13/navigation_offset = Vector2( 0, 0 )
-13/shape_offset = Vector2( 0, 0 )
-13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-13/shape = SubResource( 6 )
-13/shape_one_way = false
-13/shape_one_way_margin = 1.0
 13/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -346,11 +287,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 14/tile_mode = 0
 14/occluder_offset = Vector2( 0, 0 )
 14/navigation_offset = Vector2( 0, 0 )
-14/shape_offset = Vector2( 0, 0 )
-14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-14/shape = SubResource( 7 )
-14/shape_one_way = false
-14/shape_one_way_margin = 1.0
 14/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -367,11 +303,6 @@ points = PoolVector2Array( 64, 0, 128, 0, 128, 128, 0, 128, 0, 64, 64, 64, 64, 6
 15/tile_mode = 0
 15/occluder_offset = Vector2( 0, 0 )
 15/navigation_offset = Vector2( 0, 0 )
-15/shape_offset = Vector2( 0, 0 )
-15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-15/shape = SubResource( 8 )
-15/shape_one_way = false
-15/shape_one_way_margin = 1.0
 15/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -488,7 +419,7 @@ radius = 151.128
 
 [sub_resource type="CapsuleShape2D" id=46]
 radius = 55.4033
-height = 374.373
+height = 444.535
 
 [sub_resource type="CircleShape2D" id=47]
 radius = 159.332
@@ -613,6 +544,66 @@ position = Vector2( -8.02246, -208.144 )
 texture = ExtResource( 45 )
 
 [node name="EffectsList" parent="ObjectPool/Palm4" index="3"]
+margin_left = 62.1549
+margin_top = 2.1245
+margin_right = 137.155
+margin_bottom = 11.1245
+
+[node name="Palm24" parent="ObjectPool" instance=ExtResource( 2 )]
+position = Vector2( -149.124, -43.0372 )
+
+[node name="TraitUiOpener" parent="ObjectPool/Palm24" index="0"]
+visible = false
+
+[node name="CollisionShape2D" parent="ObjectPool/Palm24/TraitUiOpener" index="0"]
+visible = false
+disabled = true
+
+[node name="Sprite" parent="ObjectPool/Palm24" index="1"]
+position = Vector2( -8.02246, -208.144 )
+texture = ExtResource( 45 )
+
+[node name="EffectsList" parent="ObjectPool/Palm24" index="3"]
+margin_left = 62.1549
+margin_top = 2.1245
+margin_right = 137.155
+margin_bottom = 11.1245
+
+[node name="Palm26" parent="ObjectPool" instance=ExtResource( 2 )]
+position = Vector2( -475.86, -331.037 )
+
+[node name="TraitUiOpener" parent="ObjectPool/Palm26" index="0"]
+visible = false
+
+[node name="CollisionShape2D" parent="ObjectPool/Palm26/TraitUiOpener" index="0"]
+visible = false
+disabled = true
+
+[node name="Sprite" parent="ObjectPool/Palm26" index="1"]
+position = Vector2( -8.02246, -208.144 )
+texture = ExtResource( 45 )
+
+[node name="EffectsList" parent="ObjectPool/Palm26" index="3"]
+margin_left = 62.1549
+margin_top = 2.1245
+margin_right = 137.155
+margin_bottom = 11.1245
+
+[node name="Palm25" parent="ObjectPool" instance=ExtResource( 2 )]
+position = Vector2( -787.27, -434.037 )
+
+[node name="TraitUiOpener" parent="ObjectPool/Palm25" index="0"]
+visible = false
+
+[node name="CollisionShape2D" parent="ObjectPool/Palm25/TraitUiOpener" index="0"]
+visible = false
+disabled = true
+
+[node name="Sprite" parent="ObjectPool/Palm25" index="1"]
+position = Vector2( -8.02246, -208.144 )
+texture = ExtResource( 45 )
+
+[node name="EffectsList" parent="ObjectPool/Palm25" index="3"]
 margin_left = 62.1549
 margin_top = 2.1245
 margin_right = 137.155
@@ -757,75 +748,6 @@ margin_left = 62.1549
 margin_top = 2.1245
 margin_right = 137.155
 margin_bottom = 11.1245
-
-[node name="Palm23" parent="ObjectPool" instance=ExtResource( 2 )]
-position = Vector2( -1132.01, -190.473 )
-
-[node name="TraitUiOpener" parent="ObjectPool/Palm23" index="0"]
-visible = false
-
-[node name="CollisionShape2D" parent="ObjectPool/Palm23/TraitUiOpener" index="0"]
-visible = false
-disabled = true
-
-[node name="Sprite" parent="ObjectPool/Palm23" index="1"]
-position = Vector2( 636.476, -287.008 )
-texture = ExtResource( 45 )
-
-[node name="EffectsList" parent="ObjectPool/Palm23" index="3"]
-margin_left = 62.1549
-margin_top = 2.1245
-margin_right = 137.155
-margin_bottom = 11.1245
-
-[node name="ObjectCollision" parent="ObjectPool/Palm23" index="4"]
-position = Vector2( 651.886, -82.9983 )
-
-[node name="Palm24" parent="ObjectPool" instance=ExtResource( 2 )]
-position = Vector2( -1132.01, -190.473 )
-
-[node name="TraitUiOpener" parent="ObjectPool/Palm24" index="0"]
-visible = false
-
-[node name="CollisionShape2D" parent="ObjectPool/Palm24/TraitUiOpener" index="0"]
-visible = false
-disabled = true
-
-[node name="Sprite" parent="ObjectPool/Palm24" index="1"]
-position = Vector2( 940.476, 24.9918 )
-texture = ExtResource( 45 )
-
-[node name="EffectsList" parent="ObjectPool/Palm24" index="3"]
-margin_left = 62.1549
-margin_top = 2.1245
-margin_right = 137.155
-margin_bottom = 11.1245
-
-[node name="ObjectCollision" parent="ObjectPool/Palm24" index="4"]
-position = Vector2( 950.327, 227.436 )
-
-[node name="Palm25" parent="ObjectPool" instance=ExtResource( 2 )]
-position = Vector2( -1132.01, -190.473 )
-
-[node name="TraitUiOpener" parent="ObjectPool/Palm25" index="0"]
-visible = false
-
-[node name="CollisionShape2D" parent="ObjectPool/Palm25/TraitUiOpener" index="0"]
-visible = false
-disabled = true
-
-[node name="Sprite" parent="ObjectPool/Palm25" index="1"]
-position = Vector2( 356.476, -423.008 )
-texture = ExtResource( 45 )
-
-[node name="EffectsList" parent="ObjectPool/Palm25" index="3"]
-margin_left = 62.1549
-margin_top = 2.1245
-margin_right = 137.155
-margin_bottom = 11.1245
-
-[node name="ObjectCollision" parent="ObjectPool/Palm25" index="4"]
-position = Vector2( 371.886, -220.564 )
 
 [node name="Palm12" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -614.092, 1539.48 )
@@ -1049,7 +971,6 @@ margin_bottom = 11.1245
 
 [node name="Player" parent="ObjectPool" instance=ExtResource( 1 )]
 position = Vector2( 1040.06, 2434.52 )
-deltaSpeedCoef = 4
 
 [node name="Seagul" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -31.9642, 1830.52 )
@@ -1140,7 +1061,6 @@ shape = SubResource( 19 )
 [node name="Flower" parent="ObjectPool" instance=ExtResource( 2 )]
 position = Vector2( -165.28, 584.469 )
 script = ExtResource( 23 )
-MAX_TRAITS = 1
 INNATE_TRAIT_BG_COLOR = Color( 1, 0, 0, 1 )
 
 [node name="CollisionShape2D" parent="ObjectPool/Flower/TraitUiOpener" index="0"]
@@ -1594,9 +1514,9 @@ margin_right = -14.2832
 margin_bottom = 102.423
 
 [node name="ObjectCollision" parent="ObjectPool/Monkey" index="4"]
-position = Vector2( 9.39331, -1.70044 )
+position = Vector2( 14.9492, 6.23621 )
 rotation = 2.2061
-scale = Vector2( 0.337766, -1.64548 )
+scale = Vector2( 0.890544, 1.02994 )
 shape = SubResource( 46 )
 
 [node name="Scream" type="AudioStreamPlayer2D" parent="ObjectPool/Monkey"]
@@ -1679,6 +1599,12 @@ shape = SubResource( 50 )
 
 [editable path="ObjectPool/Palm4"]
 
+[editable path="ObjectPool/Palm24"]
+
+[editable path="ObjectPool/Palm26"]
+
+[editable path="ObjectPool/Palm25"]
+
 [editable path="ObjectPool/Palm5"]
 
 [editable path="ObjectPool/Palm6"]
@@ -1692,12 +1618,6 @@ shape = SubResource( 50 )
 [editable path="ObjectPool/Palm10"]
 
 [editable path="ObjectPool/Palm11"]
-
-[editable path="ObjectPool/Palm23"]
-
-[editable path="ObjectPool/Palm24"]
-
-[editable path="ObjectPool/Palm25"]
 
 [editable path="ObjectPool/Palm12"]
 
