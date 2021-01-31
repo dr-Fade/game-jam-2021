@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/textures/ground_atlas.png" type="Texture" id=6]
 [ext_resource path="res://assets/textures/tile_2.png" type="Texture" id=7]
 [ext_resource path="res://assets/textures/temp_Textures/fly.png" type="Texture" id=8]
-[ext_resource path="res://scenes/singletons/ObjectTrasformator.gd" type="Script" id=9]
+[ext_resource path="res://scenes/singletons/Scene.gd" type="Script" id=9]
 [ext_resource path="res://assets/textures/temp_Textures/bandage-activity-game-sport-512.png" type="Texture" id=10]
 [ext_resource path="res://assets/textures/temp_Textures/towel.png" type="Texture" id=11]
 [ext_resource path="res://assets/textures/temp_Textures/citizen.png" type="Texture" id=12]
@@ -23,6 +23,7 @@
 [ext_resource path="res://assets/textures/bonfire.png" type="Texture" id=21]
 [ext_resource path="res://scenes/objects/Bonfire2.gd" type="Script" id=22]
 [ext_resource path="res://scenes/objects/Towel.gd" type="Script" id=23]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 128, 0, 0, 64, 0, 64, 64, 64, 64, 64, 64, 64, 128, 64, 128 )

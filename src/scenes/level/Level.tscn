@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://scenes/character/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/objects/Object.tscn" type="PackedScene" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/textures/пасажир.png" type="Texture" id=6]
 [ext_resource path="res://assets/textures/бинт.png" type="Texture" id=7]
 [ext_resource path="res://scenes/objects/Bandage.gd" type="Script" id=8]
-[ext_resource path="res://scenes/singletons/ObjectTrasformator.gd" type="Script" id=9]
+[ext_resource path="res://scenes/singletons/Scene.gd" type="Script" id=9]
 [ext_resource path="res://assets/textures/лодка.png" type="Texture" id=10]
 [ext_resource path="res://assets/textures/water_Corner.png" type="Texture" id=11]
 [ext_resource path="res://scenes/objects/Boat.gd" type="Script" id=12]
@@ -50,6 +50,7 @@
 [ext_resource path="res://assets/sfx/monkey-screaming.ogg" type="AudioStream" id=48]
 [ext_resource path="res://assets/sfx/cave.ogg" type="AudioStream" id=49]
 [ext_resource path="res://assets/sfx/lava-loop.ogg" type="AudioStream" id=50]
+[ext_resource path="res://assets/fonts/Michellefont-Regular.otf" type="DynamicFontData" id=51]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
@@ -434,6 +435,30 @@ radius = 77.951
 [sub_resource type="CapsuleShape2D" id=50]
 radius = 9.9722
 height = 57.8395
+
+[sub_resource type="DynamicFontData" id=51]
+font_path = "res://assets/fonts/Yahfie-Normal.ttf"
+
+[sub_resource type="DynamicFont" id=52]
+size = 24
+font_data = SubResource( 51 )
+
+[sub_resource type="Theme" id=53]
+default_font = SubResource( 52 )
+
+[sub_resource type="StyleBoxFlat" id=54]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFontData" id=55]
+font_path = "res://assets/fonts/Michellefont-Regular.otf"
+
+[sub_resource type="DynamicFont" id=56]
+size = 96
+font_data = SubResource( 55 )
+
+[sub_resource type="DynamicFont" id=57]
+size = 64
+font_data = ExtResource( 51 )
 
 [node name="LevelScene" type="Node2D"]
 position = Vector2( -640, -672 )
@@ -1632,6 +1657,52 @@ margin_bottom = 16.0443
 [node name="ObjectCollision" parent="ObjectPool/Spider" index="4"]
 position = Vector2( 6.89197, -6.39978 )
 shape = SubResource( 50 )
+
+[node name="MenuCanvas" type="CanvasLayer" parent="."]
+
+[node name="Menu" type="ColorRect" parent="MenuCanvas"]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 0.784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="MenuCanvas/Menu"]
+margin_left = 488.0
+margin_top = 296.0
+margin_right = 537.0
+margin_bottom = 325.0
+theme = SubResource( 53 )
+custom_styles/normal = SubResource( 54 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="MenuCanvas/Menu"]
+margin_top = 28.0
+margin_right = 1024.0
+margin_bottom = 99.0
+custom_fonts/font = SubResource( 56 )
+text = "Mixed Traits Island"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinLabel" type="Label" parent="MenuCanvas/Menu"]
+visible = false
+margin_top = 192.0
+margin_right = 1024.0
+margin_bottom = 263.0
+custom_fonts/font = SubResource( 57 )
+text = "You won!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="MenuCanvas/Menu/Button" to="." method="_on_PlayButton_pressed"]
 
 [editable path="ObjectPool/Passenger"]
 

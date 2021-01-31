@@ -8,6 +8,7 @@ var traits := []
 
 var effect = null
 
+onready var scene = get_owner()
 onready var player_object = get_owner().find_node("Player")
 onready var quest_checks = player_object.find_node("Quest")
 onready var quest_sfx = quest_checks.find_node("Effect")
@@ -27,6 +28,7 @@ func fill_ui_lists():
 		$EffectsList.visible = true
 
 func add_trait(new_trait):
+	
 	var new_innate_traits = Traits.fit_trait(new_trait, innate_traits)
 	var new_traits = Traits.fit_trait(new_trait, traits)
 	if traits_not_changed(new_innate_traits, new_traits):
@@ -35,7 +37,6 @@ func add_trait(new_trait):
 	traits = new_traits
 	effect = check_win_conditions()
 	fill_ui_lists()
-
 
 func add_trait_at(new_trait, index):
 	traits[index] = new_trait
@@ -71,6 +72,11 @@ func complete_quest(quest_check):
 	quest_sfx.playing = false
 	quest_check.visible = true
 	quest_sfx.playing = true
+	if quests_are_completed():
+		scene.win()
+
+func quests_are_completed():
+	return quest_checks.find_node("BoatCheck").visible and quest_checks.find_node("BonfireCheck").visible and quest_checks.find_node("NativeCheck").visible
 
 func traits_not_changed(new_innate_traits, new_traits):
 	return new_innate_traits.size() == innate_traits.size() and new_traits.size() == traits.size()

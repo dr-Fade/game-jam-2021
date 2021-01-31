@@ -2,6 +2,7 @@ extends AbstractObject
 class_name Player
 
 var peer_object = null
+var acceps_inputs = true
 
 func _ready():
 	traits.append(Traits.Trait.EMPTY)
@@ -10,6 +11,8 @@ func _ready():
 	fill_ui_lists()
 
 func _physics_process(delta) -> void:
+	if !acceps_inputs:
+		return
 	var deltaSpeed = deltaSpeedCoef * delta
 	var speedX = speed.x * deltaSpeed
 	var speedY = speed.y * deltaSpeed

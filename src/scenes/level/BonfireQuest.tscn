@@ -8,7 +8,7 @@
 [ext_resource path="res://scenes/objects/Bonfire.gd" type="Script" id=6]
 [ext_resource path="res://assets/textures/cave.png" type="Texture" id=7]
 [ext_resource path="res://assets/textures/totem_pole.png" type="Texture" id=8]
-[ext_resource path="res://scenes/singletons/ObjectTrasformator.gd" type="Script" id=9]
+[ext_resource path="res://scenes/singletons/Scene.gd" type="Script" id=9]
 [ext_resource path="res://scenes/objects/Volcano.gd" type="Script" id=10]
 [ext_resource path="res://assets/textures/volcano.png" type="Texture" id=11]
 [ext_resource path="res://scenes/objects/Totem.gd" type="Script" id=12]
@@ -16,6 +16,7 @@
 [ext_resource path="res://scenes/objects/Cave.gd" type="Script" id=14]
 [ext_resource path="res://scenes/objects/Crystals.gd" type="Script" id=15]
 [ext_resource path="res://scenes/effects/FIRE.tscn" type="PackedScene" id=16]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 128, 0, 0, 64, 0, 64, 64, 64, 64, 64, 64, 64, 128, 64, 128 )
