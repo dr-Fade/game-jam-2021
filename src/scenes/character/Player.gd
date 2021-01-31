@@ -18,13 +18,13 @@ func _physics_process(delta) -> void:
 	var velocityY: = Vector2(0, speedY)
 	
 	if Input.is_key_pressed(KEY_D):
-		move_and_slide(velocityX)
+		move_and_collide(velocityX)
 	if Input.is_key_pressed(KEY_A):
-		move_and_slide(-velocityX)
+		move_and_collide(-velocityX)
 	if Input.is_key_pressed(KEY_W):
-		move_and_slide(-velocityY)
+		move_and_collide(-velocityY)
 	if Input.is_key_pressed(KEY_S):
-		move_and_slide(velocityY)
+		move_and_collide(velocityY)
 
 func _on_TraitUiOpener_body_entered(body):
 	if body is AbstractObject and body != self:
