@@ -1,27 +1,38 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/objects/AbstractObject.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Michellefont-Regular.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/fonts/Yahfie-Normal.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 83.5859
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=7]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=2]
 size = 56
 font_data = ExtResource( 2 )
 
-[sub_resource type="Theme" id=4]
-default_font = SubResource( 3 )
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=5]
 radius = 9.9722
 height = 71.0165
 
 [node name="Object" type="KinematicBody2D"]
 script = ExtResource( 1 )
-INNATE_TRAIT_BG_COLOR = Color( 0.843137, 0.203922, 0.203922, 1 )
+INNATE_TRAIT_BG_COLOR = Color( 0.823529, 0.333333, 0.333333, 0.470588 )
 
 [node name="TraitUiOpener" type="Area2D" parent="."]
 modulate = Color( 0.898039, 0, 1, 1 )
@@ -38,6 +49,9 @@ shape = SubResource( 1 )
 visible = false
 margin_left = 0.263519
 margin_right = 75.2635
+theme = SubResource( 8 )
+custom_styles/bg = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 auto_height = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -53,8 +67,8 @@ margin_bottom = 9.4427
 rect_clip_content = false
 hint_tooltip = "This is an Effect of the object. Combine Traits to achieve desired Effect!"
 mouse_filter = 2
-theme = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+theme = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 auto_height = true
 __meta__ = {
@@ -63,7 +77,7 @@ __meta__ = {
 
 [node name="ObjectCollision" type="CollisionShape2D" parent="."]
 rotation = 1.57079
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 [connection signal="body_entered" from="TraitUiOpener" to="." method="_on_TraitUiOpener_body_entered"]
 [connection signal="body_exited" from="TraitUiOpener" to="." method="_on_TraitUiOpener_body_exited"]
 [connection signal="item_activated" from="TraitsList" to="." method="_on_TraitsList_item_activated"]

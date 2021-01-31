@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/textures/UI/Check.png" type="Texture" id=3]
 [ext_resource path="res://assets/sfx/blip-effect.wav" type="AudioStream" id=4]
 
-[node name="Quest" type="Node2D"]
+[node name="Quest" type="CanvasLayer"]
 script = ExtResource( 1 )
 
 [node name="QuestBackgorund" type="Sprite" parent="."]

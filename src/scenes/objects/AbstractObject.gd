@@ -1,7 +1,6 @@
 extends Actor
 class_name AbstractObject
 
-export var MAX_TRAITS = 2
 export var INNATE_TRAIT_BG_COLOR = Color(1, 0, 0, 1)
 
 var innate_traits := []
@@ -20,7 +19,7 @@ func fill_ui_lists():
 	for t in innate_traits:
 		$TraitsList.add_item(Traits.Trait.keys()[t].capitalize())
 		var last = $TraitsList.get_item_count()-1
-		$TraitsList.set_item_custom_bg_color(last, INNATE_TRAIT_BG_COLOR)
+		$TraitsList.set_item_custom_fg_color(last, INNATE_TRAIT_BG_COLOR)
 	for t in traits:
 		$TraitsList.add_item(Traits.Trait.keys()[t].capitalize())
 	if effect != null and self != player_object:

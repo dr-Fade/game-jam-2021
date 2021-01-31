@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/character/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Quest.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/music/ukulele-loop.ogg" type="AudioStream" id=3]
 [ext_resource path="res://assets/sfx/shore-noises.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/fonts/Yahfie-Normal.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 14.1644
@@ -12,6 +13,16 @@ height = 19.7175
 [sub_resource type="StreamTexture" id=2]
 flags = 4
 load_path = "res://.import/Player.png-b933e46b6c02f5ee176339a9906c23bf.stex"
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=5]
+default_font = SubResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 0 )
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 121.48
@@ -39,13 +50,15 @@ margin_left = 14.227
 margin_top = 18.3784
 margin_right = 87.227
 margin_bottom = 68.3784
+theme = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 auto_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Quest" parent="." instance=ExtResource( 2 )]
-position = Vector2( -512, -352 )
 
 [node name="TraitUiOpener" type="Area2D" parent="."]
 position = Vector2( 0.116547, -52.1702 )
